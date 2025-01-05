@@ -1,3 +1,5 @@
+import { PluginAPI } from "tailwindcss/types/config";
+
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 const {
@@ -26,18 +28,18 @@ module.exports = {
     },
   },
   plugins: [
-    addVariablesForColors, // Renkleri global değişkenlere ekleme
+    function addVariablesForColors({ addBase, theme }: PluginAPI) {
+      const allColors = flattenColorPalette(theme("colors"));
+      const newVars = Object.fromEntries(
+        Object.entries(allColors).map(([key, val]) => [
+          `--${key}`,
+          val as string, // Türü açıkça belirtmek için `as string` ekleniyor
+        ])
+      );
+
+      addBase({
+        ":root": newVars as Record<string, string>, // `newVars` türünü açıkça belirtiyoruz
+      });
+    },
   ],
 };
-
-// Tüm Tailwind renklerini global CSS değişkeni olarak ekleyen plugin
-function addVariablesForColors({ addBase, theme }) {
-  const allColors = flattenColorPalette(theme("colors"));
-  const newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-}

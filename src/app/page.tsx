@@ -47,13 +47,12 @@ export default function Home() {
               <Button
               title="About Me"
               className="text-start border px-6 py-2 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0"
-              type="button"
               onClick={() => alert("Hello World!")}
               />
              <div className="flex justify-center">
-             <Socials link="https://primereact.org/dock/" icon={<FaGithub />} className="rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[40px] text-2xl"/>
-              <Socials link="https://primereact.org/dock/" icon={<BiLogoInstagramAlt />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[50px] text-3xl"/>
-              <Socials link="https://primereact.org/dock/" icon={<FaSquareXTwitter />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[40px] text-2xl"/>
+             <Socials link="https://primereact.org/dock/" type="button" icon={<FaGithub />} className="rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[40px] text-2xl"/>
+              <Socials link="https://primereact.org/dock/" type="button" icon={<BiLogoInstagramAlt />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[50px] text-3xl"/>
+              <Socials link="https://primereact.org/dock/" type="button" icon={<FaSquareXTwitter />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[40px] text-2xl"/>
              </div>
               </div>
             </div>

@@ -8,13 +8,14 @@ import { ReactNode } from "react"
         className?:string
         iconName?:string
         classNameLink?:string
+        type:string
     }
-function Socials({ link, icon, className,classNameLink}: Socials) {
+function Socials({ link, icon, className,classNameLink,type}: Socials) {
 
 
   return (
    <span className={className}>   
-        <Link href={link} className={classNameLink}>
+        <Link href={link} className={classNameLink} type={type}>
            {icon}
         </Link>
    </span>

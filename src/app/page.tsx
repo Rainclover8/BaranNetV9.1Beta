@@ -46,7 +46,7 @@ export default function Home() {
               <div className="lg:flex lg:flex-row mt-4  md:flex-col md:flex justify-center items-center  gap-2 ">
               <Button
               title="About Me"
-              className="text-start border px-6 py-2 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0"
+              className="text-start border px-6 py-2 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200"
               onClick={() => alert("Hello World!")}
               />
              <div className="flex justify-center">

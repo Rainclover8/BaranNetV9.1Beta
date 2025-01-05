@@ -13,7 +13,6 @@ import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
-
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -43,17 +42,35 @@ export default function Home() {
                 words="Full Stack Web Developer"
                 className="lg:text-4xl md:text-xl font-mono text-black dark:text-white"
               />
-              <div className="lg:flex lg:flex-row mt-4  md:flex-col md:flex justify-center items-center  gap-2 ">
-              <Button
-              title="About Me"
-              className="text-start border px-6 py-2 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200"
-              onClick={() => alert("Hello World!")}
-              />
-             <div className="flex justify-center">
-             <Socials link="https://github.com/Rainclover8" type="button" icon={<FaGithub />} className="rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative hover:scale-110 duration-200 z-[999] lg:text-[40px] text-2xl"/>
-              <Socials link="https://www.instagram.com/baranncicek19/" type="button" icon={<BiLogoInstagramAlt />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative hover:scale-110 duration-200 z-[999] lg:text-[50px] text-3xl"/>
-              <Socials link="https://x.com/baran08380241?s=21" type="button" icon={<FaSquareXTwitter />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative hover:scale-110 duration-200 z-[999] lg:text-[40px] text-2xl"/>
-             </div>
+              <div className="lg:flex lg:flex-row mt-4 md:flex-col md:flex justify-center items-center gap-2">
+                <Button
+                  title="About Me"
+                  className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200"
+                  onClick={() => alert("Hello World!")}
+                />
+                <div className="flex md:flex-1 items-center lg:justify-start justify-center mt-3 ">
+                  <Socials
+                    link="https://github.com/Rainclover8"
+                    type="button"
+                    icon={<FaGithub />}
+                    className="rounded-full border-none text-black dark:text-white flex items-center justify-center"
+                    classNameLink="relative hover:scale-110 duration-200 z-[999] lg:text-[40px] text-2xl"
+                  />
+                  <Socials
+                    link="https://www.instagram.com/baranncicek19/"
+                    type="button"
+                    icon={<BiLogoInstagramAlt />}
+                    className=" rounded-full border-none text-black dark:text-white flex items-center justify-center"
+                    classNameLink="relative hover:scale-110 duration-200 z-[999] lg:text-[50px] text-3xl"
+                  />
+                  <Socials
+                    link="https://x.com/baran08380241?s=21"
+                    type="button"
+                    icon={<FaSquareXTwitter />}
+                    className=" rounded-full border-none text-black dark:text-white flex items-center justify-center"
+                    classNameLink="relative hover:scale-110 duration-200 z-[999] lg:text-[40px] text-2xl"
+                  />
+                </div>
               </div>
             </div>
             <Image
@@ -66,22 +83,20 @@ export default function Home() {
             />
           </div>
         </AuroraBackground>
-        <ShootingStars />
-       
+        <ShootingStars minSpeed={2} maxSpeed={8} />
       </div>
       <div className="mt-1">
         <LampDemo />
       </div>
 
-
       <div className="fixed top-5 right-5 z-[50]">
-          <button
-            onClick={toggleDarkMode}
-            className="p-2 rounded bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
-          >
-            {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
-          </button>
-        </div>
+        <button
+          onClick={toggleDarkMode}
+          className="p-2 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-full"
+        >
+          {darkMode ? "☀️" : "🌙 "}
+        </button>
+      </div>
     </>
   );
 }

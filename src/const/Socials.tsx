@@ -19,12 +19,12 @@ function Socials({ link, icon, className,classNameLink,type}: Socials) {
    initial={{ opacity: 0,}}
    animate={{ opacity: 1,}}
    transition={{
-    duration: 1,
-    delay: 0.5, 
+    duration: 2,
+    delay: 2,
     ease: "easeOut",
   }}
    >   
-        <Link href={link} className={classNameLink} type={type}>
+        <Link href={link} className={classNameLink} type={type} target="_blank">
            {icon}
         </Link>
    </motion.span>

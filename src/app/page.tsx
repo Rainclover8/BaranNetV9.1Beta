@@ -1,101 +1,92 @@
+"use client";
+
+import { AuroraBackground } from "@/components/aurora-background";
+import { LampDemo } from "@/components/lamp";
+import { LinkPreview } from "@/components/link-preview";
+import { ShootingStars } from "@/components/shooting-stars";
+import { TextGenerateEffect } from "@/components/text-generate-effect";
+import Button from "@/const/Button";
+import Socials from "@/const/Socials";
 import Image from "next/image";
+import { useState } from "react";
+import { BiLogoInstagramAlt } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [darkMode, setDarkMode] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (!darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
+  return (
+    <>
+      <div className={darkMode ? "dark" : ""}>
+        <AuroraBackground className=" bg-white dark:bg-black">
+          <div className="md:flex justify-around items-center w-full h-full mt-24">
+            <div className="text-center">
+              <TextGenerateEffect
+                duration={3}
+                words="BARAN ÇİÇEK"
+                className="lg:text-7xl md:text-4xl text-xl text-center z-[99] text-black dark:text-white"
+              />
+
+              <TextGenerateEffect
+                duration={4}
+                words="Full Stack Web Developer"
+                className="lg:text-4xl md:text-xl font-mono text-black dark:text-white"
+              />
+              <div className="lg:flex lg:flex-row mt-4  md:flex-col md:flex justify-center items-center  gap-2 ">
+              <Button
+              title="About Me"
+              className="text-start border px-6 py-2 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0"
+              type="button"
+              onClick={() => alert("Hello World!")}
+              />
+             <div className="flex justify-center">
+             <Socials link="https://primereact.org/dock/" icon={<FaGithub />} className="rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[40px] text-2xl"/>
+              <Socials link="https://primereact.org/dock/" icon={<BiLogoInstagramAlt />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[50px] text-3xl"/>
+              <Socials link="https://primereact.org/dock/" icon={<FaSquareXTwitter />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[40px] text-2xl"/>
+             </div>
+              </div>
+            </div>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/logo.png"
+              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-7"
+              width={500}
+              height={100}
+              layout="intrinsic"
+              alt="Logo"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </div>
+        </AuroraBackground>
+        <ShootingStars />
+       
+      </div>
+      <div className="mt-1">
+        <LampDemo />
+      </div>
+
+      <LinkPreview url="https://www.tinkercad.com/things/22WbV3jeaKS-light">
+        <span className="text-white font-extrabold text-center">
+          Hover to Preview
+        </span>
+      </LinkPreview>
+      <div className="fixed top-5 right-5 z-[50]">
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
           >
-            Read our docs
-          </a>
+            {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+          </button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }

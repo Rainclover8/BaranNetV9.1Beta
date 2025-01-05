@@ -9,7 +9,7 @@ const {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
-  darkMode: "class", // Dark mode için class kullanımı
+  darkMode: "class",
   theme: {
     extend: {
       animation: {

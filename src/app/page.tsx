@@ -75,7 +75,7 @@ export default function Home() {
             </div>
             <Image
               src="/logo.png"
-              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-7"
+              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-24"
               width={500}
               height={100}
               layout="intrinsic"

@@ -50,9 +50,9 @@ export default function Home() {
               onClick={() => alert("Hello World!")}
               />
              <div className="flex justify-center">
-             <Socials link="https://github.com/Rainclover8" type="button" icon={<FaGithub />} className="rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[40px] text-2xl"/>
-              <Socials link="https://www.instagram.com/baranncicek19/" type="button" icon={<BiLogoInstagramAlt />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[50px] text-3xl"/>
-              <Socials link="https://x.com/baran08380241?s=21" type="button" icon={<FaSquareXTwitter />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative z-[999] lg:text-[40px] text-2xl"/>
+             <Socials link="https://github.com/Rainclover8" type="button" icon={<FaGithub />} className="rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative hover:scale-110 duration-200 z-[999] lg:text-[40px] text-2xl"/>
+              <Socials link="https://www.instagram.com/baranncicek19/" type="button" icon={<BiLogoInstagramAlt />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative hover:scale-110 duration-200 z-[999] lg:text-[50px] text-3xl"/>
+              <Socials link="https://x.com/baran08380241?s=21" type="button" icon={<FaSquareXTwitter />} className=" rounded-full border-none text-black dark:text-white flex items-center justify-center" classNameLink="relative hover:scale-110 duration-200 z-[999] lg:text-[40px] text-2xl"/>
              </div>
               </div>
             </div>
@@ -72,12 +72,6 @@ export default function Home() {
       <div className="mt-1">
         <LampDemo />
       </div>
-
-      <LinkPreview url="https://www.tinkercad.com/things/22WbV3jeaKS-light">
-        <span className="text-white font-extrabold text-center">
-          Hover to Preview
-        </span>
-      </LinkPreview>
 
 
       <div className="fixed top-5 right-5 z-[50]">

@@ -1,5 +1,4 @@
-import React from "react";
-
+import { motion } from "framer-motion";
 interface ButtonProps {
   title: string;
   className?: string;
@@ -8,9 +7,17 @@ interface ButtonProps {
 
 function Button({ title, className, onClick  }: ButtonProps) {
   return (
-    <button className={className} type="button" onClick={onClick}>
+    <motion.button className={className} type="button" onClick={onClick}
+    initial={{ opacity: 0,}}
+      animate={{ opacity: 1,}}
+      transition={{
+        duration: 1,
+        delay: 0.5, 
+        ease: "easeOut",
+      }}
+    >
       {title}
-    </button>
+    </motion.button>
   );
 }
 

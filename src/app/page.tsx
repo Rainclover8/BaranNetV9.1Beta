@@ -1,6 +1,7 @@
 "use client";
 
 import { AuroraBackground } from "@/components/aurora-background";
+import { FlipWords } from "@/components/flip-words";
 import { LampDemo } from "@/components/lamp";
 import { LinkPreview } from "@/components/link-preview";
 import { ShootingStars } from "@/components/shooting-stars";
@@ -8,6 +9,7 @@ import { TextGenerateEffect } from "@/components/text-generate-effect";
 import Button from "@/const/Button";
 import Socials from "@/const/Socials";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
@@ -15,7 +17,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-
+  const  words = ["Full Stack Web Developer", "UI/UX Enthusiast","Mobile Developer"]
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     if (!darkMode) {
@@ -24,7 +26,6 @@ export default function Home() {
       document.documentElement.classList.remove("dark");
     }
   };
-
   return (
     <>
       <div className={darkMode ? "dark" : ""}>
@@ -36,12 +37,8 @@ export default function Home() {
                 words="BARAN ÇİÇEK"
                 className="lg:text-7xl md:text-4xl text-xl text-center z-[99] text-black dark:text-white"
               />
-
-              <TextGenerateEffect
-                duration={4}
-                words="Full Stack Web Developer"
-                className="lg:text-4xl md:text-xl font-mono text-black dark:text-white"
-              />
+              <FlipWords words={words} className="lg:text-4xl md:text-xl font-mono text-black dark:text-white block ms-4 text-start p-0 m-0"/>
+              
               <div className="lg:flex lg:flex-row mt-4 md:flex-col md:flex justify-center items-center gap-2">
                 <Button
                   title="About Me"
@@ -75,7 +72,7 @@ export default function Home() {
             </div>
             <Image
               src="/logo.png"
-              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-24"
+              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-28"
               width={500}
               height={100}
               layout="intrinsic"
@@ -85,8 +82,9 @@ export default function Home() {
         </AuroraBackground>
         <ShootingStars minSpeed={2} maxSpeed={8} />
       </div>
-      <div className="mt-1">
+      <div className="mt-7">
         <LampDemo />
+
       </div>
 
       <div className="fixed top-5 right-5 z-[50]">

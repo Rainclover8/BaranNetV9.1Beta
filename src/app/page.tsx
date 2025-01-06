@@ -14,6 +14,8 @@ import { useState } from "react";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -37,7 +39,7 @@ export default function Home() {
                 words="BARAN ÇİÇEK"
                 className="lg:text-7xl md:text-4xl text-xl text-center z-[99] text-black dark:text-white"
               />
-              <FlipWords words={words} className="lg:text-4xl md:text-xl font-mono text-black dark:text-white block ms-4 text-start p-0 m-0"/>
+              <FlipWords words={words} className="lg:text-3xl md:text-xl font-mono text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0"/>
               
               <div className="lg:flex lg:flex-row mt-4 md:flex-col md:flex justify-center items-center gap-2">
                 <Button
@@ -82,17 +84,16 @@ export default function Home() {
         </AuroraBackground>
         <ShootingStars minSpeed={2} maxSpeed={8} />
       </div>
-      <div className="mt-7">
+      <div className="mt-9">
         <LampDemo />
-
       </div>
 
       <div className="fixed top-5 right-5 z-[50]">
         <button
           onClick={toggleDarkMode}
-          className="p-2 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-full"
+          className="p-2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded-full w-10 h-10 flex justify-center items-center duration-200"
         >
-          {darkMode ? "☀️" : "🌙 "}
+          {darkMode ? <MdLightMode/> : <MdDarkMode/>}
         </button>
       </div>
     </>

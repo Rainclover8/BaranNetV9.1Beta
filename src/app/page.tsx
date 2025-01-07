@@ -2,8 +2,8 @@
 
 import { AuroraBackground } from "@/components/aurora-background";
 import { FlipWords } from "@/components/flip-words";
+import { CardDemo } from "@/components/following-pointer";
 import { LampDemo } from "@/components/lamp";
-import { LinkPreview } from "@/components/link-preview";
 import { ShootingStars } from "@/components/shooting-stars";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
 import Button from "@/const/Button";
@@ -45,7 +45,7 @@ export default function Home() {
                 <Button
                   title="About Me"
                   className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200"
-                  onClick={() => alert("Hello World!")}
+                  link="#about"
                 />
                 <div className="flex md:flex-1 items-center lg:justify-start justify-center mt-3 ">
                   <Socials
@@ -84,9 +84,19 @@ export default function Home() {
         </AuroraBackground>
         <ShootingStars minSpeed={2} maxSpeed={8} />
       </div>
-      <div className="mt-9">
+      <div className="mt-9" id="about">
         <LampDemo />
       </div>
+
+
+      <div className="container mx-auto mt-24">
+        <h1 className="lg:text-4xl font-extrabold md:text-2xl text-xl text-black dark:text-white">Project's</h1>
+        <div className="mt-12">
+        <CardDemo url="https://www.doganinsesiturkiye.com/resim/upload/sb1855.jpg" title="Merhaba" desc="Deneme" time="02.04.2025"/>
+        </div>
+      </div>
+
+
 
       <div className="fixed top-5 right-5 z-[50]">
         <button

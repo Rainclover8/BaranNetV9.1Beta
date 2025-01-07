@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 interface ButtonProps {
   title: string;
   className?: string;
   onClick?: () => void;
+  link?:string
 }
 
-function Button({ title, className, onClick }: ButtonProps) {
+function Button({ title, className, onClick, link }: ButtonProps) {
   return (
     <motion.button
       className={className}
@@ -19,7 +21,9 @@ function Button({ title, className, onClick }: ButtonProps) {
         ease: "easeOut",
       }}
     >
+      <Link href={link}>
       {title}
+      </Link>
     </motion.button>
   );
 }

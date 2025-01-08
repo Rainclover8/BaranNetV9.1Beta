@@ -9,7 +9,7 @@ import { TextGenerateEffect } from "@/components/text-generate-effect";
 import Button from "@/const/Button";
 import Socials from "@/const/Socials";
 import Image from "next/image";
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -46,12 +46,12 @@ export default function Home() {
     }
   };
 
-  // useEffect(() => {
-  //   fetch("http://localhost:1337/api/projes")
-  //     .then((res) => res.json())
-  //     .then((data) => setProjects(data.data));
-  //   }, []);
-  //   console.log(projects);
+  useEffect(() => {
+    fetch("http://localhost:1337/api/projelers")
+      .then((res) => res.json())
+      .then((data) => setProjects(data.data));
+    }, []);
+    console.log(projects);
 
   return (
     <>
@@ -120,7 +120,7 @@ export default function Home() {
         <h1 className="lg:text-4xl font-extrabold md:text-2xl text-xl text-black dark:text-white">
           Project's
         </h1>
-        {/* <div className="mt-12 flex items-center gap-4 flex-wrap lg:justify-start justify-center">
+        <div className="mt-12 flex items-center gap-4 flex-wrap lg:justify-start justify-center">
           {projects && projects.map((props, id) => {
             return (
               <div className="" key={id}>
@@ -135,7 +135,7 @@ export default function Home() {
               </div>
             );
           })}
-        </div> */}
+        </div>
       </div>
 
       <div className="fixed top-5 right-5 z-[50]">

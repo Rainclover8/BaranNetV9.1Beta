@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projelers",
+  "info": {
+    "singularName": "projeler",
+    "pluralName": "projelers",
+    "displayName": "projeler"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "link": {
+      "type": "text"
+    },
+    "url": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "time": {
+      "type": "date"
+    }
+  }
+}

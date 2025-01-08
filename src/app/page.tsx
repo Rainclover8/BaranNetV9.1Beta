@@ -101,7 +101,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="/logo.png"
+              src={ darkMode ? "/logo.png" : "/ben.png"}
               className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-28"
               width={500}
               height={100}

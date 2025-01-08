@@ -1,17 +1,23 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "../../node_modules/next/link";
 
 interface card {
   url?: string;
   title: string;
   desc: string;
   time: string;
+  link:string;
 }
 
-export function CardDemo({ url, title, desc, time }: card) {
+export function CardDemo({ url, title, desc, time, link }: card) {
   return (
     <div className="max-w-xs w-full group/card">
+      <Link
+      target={"_blank"}
+      href={link || '/'}
+      >
       <div
         className="cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl max-w-sm mx-auto flex flex-col justify-between p-4"
         style={{ backgroundImage: `url(${url})`, backgroundSize: "cover" }}
@@ -21,7 +27,7 @@ export function CardDemo({ url, title, desc, time }: card) {
           <Image
             height="100"
             width="100"
-            alt="Logo"
+            alt="deneme"
             src="/logo.png"
             className="h-10 w-10 rounded-full border-2 object-cover"
           />
@@ -41,6 +47,7 @@ export function CardDemo({ url, title, desc, time }: card) {
           </p>
         </div>
       </div>
+      </Link>
     </div>
   );
 }

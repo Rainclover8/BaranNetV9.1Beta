@@ -92,7 +92,7 @@ export default function Home() {
       <div className="container mx-auto mt-24">
         <h1 className="lg:text-4xl font-extrabold md:text-2xl text-xl text-black dark:text-white">Project's</h1>
         <div className="mt-12">
-        <CardDemo url="https://www.doganinsesiturkiye.com/resim/upload/sb1855.jpg" title="Merhaba" desc="Deneme" time="02.04.2025"/>
+        <CardDemo link="https://www.karasuacicikurtarici.com/" url="/karasuKurtarici.jpg" title="Karasu Oto Kurtarma" desc="Karasu Oto Kurtarma | 7/24 Hızlı ve Güvenilir Çekici Hizmeti. Karasu, Sakarya ve çevresinde araç kurtarma hizmetleri için hemen arayın!" time="10.12.2024"/>
         </div>
       </div>
 

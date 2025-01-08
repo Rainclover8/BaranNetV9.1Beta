@@ -21,7 +21,7 @@ function Button({ title, className, onClick, link }: ButtonProps) {
         ease: "easeOut",
       }}
     >
-      <Link href={link}>
+      <Link href={link || '/'}>
       {title}
       </Link>
     </motion.button>

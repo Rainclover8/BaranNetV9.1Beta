@@ -9,9 +9,10 @@ interface card {
   desc: string;
   time: string;
   link:string;
+  sub_title:string;
 }
 
-export function CardDemo({ url, title, desc, time, link }: card) {
+export function CardDemo({ url, title, desc, time, link, sub_title }: card) {
   return (
     <div className="max-w-xs w-full group/card">
       <Link
@@ -40,7 +41,7 @@ export function CardDemo({ url, title, desc, time, link }: card) {
         </div>
         <div className="text content">
           <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-            Karasu Kurtarıcı
+            {sub_title}
           </h1>
           <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
             {desc}

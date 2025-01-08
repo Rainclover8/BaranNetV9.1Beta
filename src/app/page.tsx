@@ -9,17 +9,34 @@ import { TextGenerateEffect } from "@/components/text-generate-effect";
 import Button from "@/const/Button";
 import Socials from "@/const/Socials";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 
+
+
+interface Project {
+  link: string;
+  url: string;
+  title: string;
+  desc: string;
+  sub_title?: string;
+  time: string;
+}
+
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  const  words = ["Full Stack Web Developer", "UI/UX Enthusiast","Mobile Developer"]
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  const words = [
+    "Full Stack Web Developer",
+    "UI/UX Enthusiast",
+    "Mobile Developer",
+  ];
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     if (!darkMode) {
@@ -28,6 +45,14 @@ export default function Home() {
       document.documentElement.classList.remove("dark");
     }
   };
+
+  useEffect(() => {
+    fetch("http://localhost:1337/api/projes")
+      .then((res) => res.json())
+      .then((data) => setProjects(data.data));
+    }, []);
+    console.log(projects);
+
   return (
     <>
       <div className={darkMode ? "dark" : ""}>
@@ -39,8 +64,11 @@ export default function Home() {
                 words="BARAN ÇİÇEK"
                 className="lg:text-7xl md:text-4xl text-xl text-center z-[99] text-black dark:text-white"
               />
-              <FlipWords words={words} className="lg:text-3xl md:text-xl font-mono text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0"/>
-              
+              <FlipWords
+                words={words}
+                className="lg:text-3xl md:text-xl font-mono text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0"
+              />
+
               <div className="lg:flex lg:flex-row mt-4 md:flex-col md:flex justify-center items-center gap-2">
                 <Button
                   title="About Me"
@@ -88,22 +116,34 @@ export default function Home() {
         <LampDemo />
       </div>
 
-
       <div className="container mx-auto mt-24">
-        <h1 className="lg:text-4xl font-extrabold md:text-2xl text-xl text-black dark:text-white">Project's</h1>
-        <div className="mt-12">
-        <CardDemo link="https://www.karasuacicikurtarici.com/" url="/karasuKurtarici.jpg" title="Karasu Oto Kurtarma" desc="Karasu Oto Kurtarma | 7/24 Hızlı ve Güvenilir Çekici Hizmeti. Karasu, Sakarya ve çevresinde araç kurtarma hizmetleri için hemen arayın!" time="10.12.2024"/>
+        <h1 className="lg:text-4xl font-extrabold md:text-2xl text-xl text-black dark:text-white">
+          Project's
+        </h1>
+        <div className="mt-12 flex items-center gap-4 flex-wrap lg:justify-start justify-center">
+          {projects && projects.map((props, id) => {
+            return (
+              <div className="" key={id}>
+                <CardDemo
+                link={props.link}
+                url={props.url}
+                title={props.title}
+                desc={props.desc}
+                sub_title={props.sub_title || ''}
+                time={props.time}
+              />
+              </div>
+            );
+          })}
         </div>
       </div>
-
-
 
       <div className="fixed top-5 right-5 z-[50]">
         <button
           onClick={toggleDarkMode}
           className="p-2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded-full w-10 h-10 flex justify-center items-center duration-200"
         >
-          {darkMode ? <MdLightMode/> : <MdDarkMode/>}
+          {darkMode ? <MdLightMode /> : <MdDarkMode />}
         </button>
       </div>
     </>

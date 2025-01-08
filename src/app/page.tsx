@@ -48,7 +48,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch("http://localhost:1337/api/projelers")
-      .then((res) => res.json())
+    .then((res) => res.json())
       .then((data) => setProjects(data.data));
     }, []);
     console.log(projects);

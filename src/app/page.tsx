@@ -1,6 +1,7 @@
 "use client";
 
 import { AuroraBackground } from "@/components/aurora-background";
+import { FeaturesSectionDemo } from "@/components/FeaturesSectionDemo";
 import { FlipWords } from "@/components/flip-words";
 import { CardDemo } from "@/components/following-pointer";
 import { LampDemo } from "@/components/lamp";
@@ -9,54 +10,41 @@ import { TextGenerateEffect } from "@/components/text-generate-effect";
 import Button from "@/const/Button";
 import Socials from "@/const/Socials";
 import Image from "next/image";
-import {  useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 
-
-
-interface Project {
-  link: string;
-  url: string;
-  title: string;
-  desc: string;
-  sub_title?: string;
-  time: string;
-}
-
-
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [projects, setProjects] = useState<Project[]>([]);
-
-  const words = [
-    "Full Stack Web Developer",
-    "UI/UX Enthusiast",
-    "Mobile Developer",
-  ];
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    if (!darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  };
+  const [darkMode, setDarkMode] = useState<boolean | null>(null);  // Null başlangıç değeri
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/projelers")
-    .then((res) => res.json())
-      .then((data) => setProjects(data.data));
-    }, []);
-    console.log(projects);
+    // Kullanıcının tercihlerini localStorage'den almak
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    setDarkMode(isDarkMode);
+    
+    // Dark mode stilini uygula
+    document.documentElement.classList.toggle("dark", isDarkMode);
+  }, []);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prev) => {
+      const newDarkMode = !prev;
+      localStorage.setItem("darkMode", JSON.stringify(newDarkMode)); // Yeni durumu localStorage'a kaydet
+      document.documentElement.classList.toggle("dark", newDarkMode);
+      return newDarkMode;
+    });
+  };
+
+  // darkMode null ise render etme
+  if (darkMode === null) return null;
 
   return (
     <>
       <div className={darkMode ? "dark" : ""}>
-        <AuroraBackground className=" bg-white dark:bg-black">
+        <AuroraBackground className="bg-white dark:bg-black">
           <div className="md:flex justify-around items-center w-full h-full mt-24">
             <div className="text-center">
               <TextGenerateEffect
@@ -65,7 +53,7 @@ export default function Home() {
                 className="lg:text-7xl md:text-4xl text-xl text-center z-[99] text-black dark:text-white"
               />
               <FlipWords
-                words={words}
+                words={["Full Stack Web Developer", "UI/UX Enthusiast", "Mobile Developer"]}
                 className="lg:text-3xl md:text-xl font-mono text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0"
               />
 
@@ -75,7 +63,7 @@ export default function Home() {
                   className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200"
                   link="#about"
                 />
-                <div className="flex md:flex-1 items-center lg:justify-start justify-center mt-3 ">
+                <div className="flex md:flex-1 items-center lg:justify-start justify-center mt-3">
                   <Socials
                     link="https://github.com/Rainclover8"
                     type="button"
@@ -101,7 +89,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src={ darkMode ? "/logo.png" : "/ben.png"}
+              src={darkMode ? "/logo.png" : "/ben.png"}
               className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-28"
               width={500}
               height={100}
@@ -112,6 +100,7 @@ export default function Home() {
         </AuroraBackground>
         <ShootingStars minSpeed={2} maxSpeed={8} />
       </div>
+
       <div className="mt-9" id="about">
         <LampDemo />
       </div>
@@ -121,21 +110,29 @@ export default function Home() {
           Project's
         </h1>
         <div className="mt-12 flex items-center gap-4 flex-wrap lg:justify-start justify-center">
-          {projects && projects.map((props, id) => {
-            return (
-              <div className="" key={id}>
-                <CardDemo
-                link={props.link}
-                url={props.url}
-                title={props.title}
-                desc={props.desc}
-                sub_title={props.sub_title || ''}
-                time={props.time}
-              />
-              </div>
-            );
-          })}
+          <div className="flex gap-5 lg:justify-start flex-wrap justify-center items-center w-full lg:p-0 p-4">
+            <CardDemo
+              link="https://www.karasuacicikurtarici.com/"
+              url="/karasuKurtarici.jpg"
+              title="Karasu Oto Kurtacı"
+              desc="Karasu Oto Kurtarma | 7/24 Hızlı ve Güvenilir Çekici Hizmeti. Karasu, Sakarya ve çevresinde araç kurtarma hizmetleri için hemen arayın!"
+              sub_title="Oto Kurtarma"
+              time="10.12.2024"
+            />
+            <CardDemo
+              link="https://emojify-seven.vercel.app/"
+              url="/logo.png"
+              title="Emojfy"
+              desc="Bu emojiler hangi şarkıya ait? 🎵🤔 Tahmin edebilir misiniz?"
+              sub_title="Emoji Questions"
+              time="19.04.2024"
+            />
+          </div>
         </div>
+      </div>
+
+      <div>
+        <FeaturesSectionDemo />
       </div>
 
       <div className="fixed top-5 right-5 z-[50]">

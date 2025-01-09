@@ -121,7 +121,7 @@ export default function Home() {
             />
             <CardDemo
               link="https://emojify-seven.vercel.app/"
-              url="/logo.png"
+              url="/emojify.png"
               title="Emojfy"
               desc="Bu emojiler hangi şarkıya ait? 🎵🤔 Tahmin edebilir misiniz?"
               sub_title="Emoji Questions"

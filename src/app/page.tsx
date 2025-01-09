@@ -38,7 +38,6 @@ export default function Home() {
     });
   };
 
-  // darkMode null ise render etme
   if (darkMode === null) return null;
 
   return (
@@ -89,7 +88,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src={darkMode ? "/logo.png" : "/ben.png"}
+              src={darkMode ? "/logo.png" : "/IMG_7202.jpg"}
               className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-28"
               width={500}
               height={100}

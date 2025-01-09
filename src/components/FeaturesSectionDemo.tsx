@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Link from "next/link";
 
+
 export function FeaturesSectionDemo() {
   const features = [
     {
@@ -108,11 +109,11 @@ export const SkeletonOne = () => {
       <div className="w-full  p-5  mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           <Image
-            src="/ben.png"
+            src="/IMG_7212.JPG"
             alt="header"
             width={800}
             height={800}
-            className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
+            className="h-full w-full aspect-square object-cover object-center rounded-sm"
           />
         </div>
       </div>
@@ -135,11 +136,11 @@ export const SkeletonThree = () => {
          
           <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
           <Image
-            src="/baranYoutube.png"
-            alt="header"
+            src="/youtubePng.png"
+            alt="youtube"
             width={800}
             height={800}
-            className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
+            className="h-full w-full aspect-square  object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
           />
         </div>
       </div>
@@ -205,7 +206,7 @@ export const SkeletonTwo = () => {
           >
             <Image
               src={image}
-              alt="bali images"
+              alt="Görseller"
               width="500"
               height="500"
               className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
@@ -255,7 +256,7 @@ export const Globe = ({ className }: { className?: string }) => {
       ],
       onRender: (state) => {
         state.phi = phi;
-        phi += 0.01;
+        phi += 0.005;
       },
     });
 

@@ -43,6 +43,14 @@ export default function Home() {
       <div className={darkMode ? "dark" : ""}>
         <AuroraBackground className="bg-white dark:bg-black">
           <div className="md:flex justify-around items-center w-full h-full mt-24">
+          <Image
+              src={darkMode ? "/logo.png" : "/IMG_7202.jpg"}
+              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-28 shadow-2xl shadow-black dark:shadow-white"
+              width={500}
+              height={100}
+              layout="intrinsic"
+              alt="Logo"
+            />
             <div className="text-center">
               <TextGenerateEffect
                 duration={3}
@@ -57,7 +65,7 @@ export default function Home() {
               <div className="lg:flex lg:flex-row  md:flex-col md:flex justify-center items-center gap-2">
                 <Button
                   title="About Me"
-                  className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200 font-bold"
+                  className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-lg z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200 font-sans"
                   link="#about"
                 />
                 <div className="flex md:flex-1 items-center lg:justify-start justify-center mt-3">
@@ -85,14 +93,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Image
-              src={darkMode ? "/logo.png" : "/IMG_7202.jpg"}
-              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-28"
-              width={500}
-              height={100}
-              layout="intrinsic"
-              alt="Logo"
-            />
+           
           </div>
         </AuroraBackground>
         <ShootingStars minSpeed={2} maxSpeed={8} />

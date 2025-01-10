@@ -14,7 +14,7 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-gray-950 to-gray-700 py-4 bg-clip-text text-center lg:text-4xl font-medium tracking-tight text-transparent dark:from-gray-300 dark:to-gray-500 md:text-xl font-mono container mx-auto"
+        className="mt-8 bg-gradient-to-br from-gray-950 to-gray-700 py-4 bg-clip-text text-center lg:text-4xl font-medium tracking-tight text-transparent dark:from-gray-200 dark:to-gray-500 md:text-xl font-mono container mx-auto"
       >
         I'm a dedicated developer who thrives on solving complex problems and continuously learning new technologies. I’m a creative team player who enjoys collaborating with others and sharing knowledge.
 
@@ -52,7 +52,7 @@ export const LampContainer = ({
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
-          className="absolute inset-auto right-1/2 h-56 w-[30rem] bg-gradient-conic from-pink-500 via-transparent to-transparent dark:from-cyan-500 dark:via-transparent dark:to-transparent text-white [--conic-position:from_70deg_at_center_top]"
+          className="absolute inset-auto right-1/2 h-56 w-[30rem] bg-gradient-conic from-pink-500 via-transparent to-transparent dark:from-[#4dd0e1] dark:via-transparent dark:to-transparent text-white [--conic-position:from_70deg_at_center_top]"
         >
           <div className="absolute w-[100%] left-0 bg-gray-100 dark:bg-gray-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
           <div className="absolute w-40 h-[100%] left-0 bg-gray-100 dark:bg-gray-950 bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
@@ -68,14 +68,14 @@ export const LampContainer = ({
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
-          className="absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-pink-500 dark:from-transparent dark:via-transparent dark:to-cyan-500 text-white [--conic-position:from_290deg_at_center_top]"
+          className="absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-pink-500 dark:from-transparent dark:via-transparent dark:to-[#4dd0e1] text-white [--conic-position:from_290deg_at_center_top]"
         >
           <div className="absolute w-40 h-[100%] right-0 bg-gray-100 dark:bg-gray-950 bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
           <div className="absolute w-[100%] right-0 bg-gray-100 dark:bg-gray-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
         </motion.div>
         <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-gray-100 dark:bg-gray-950 blur-2xl"></div>
         <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
-        <div className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-pink-500 dark:bg-cyan-500 opacity-50 blur-3xl"></div>
+        <div className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-pink-500 dark:bg-[#4dd0e1] opacity-50 blur-3xl"></div>
         <motion.div
           initial={{ width: "8rem" }}
           whileInView={{ width: "16rem" }}
@@ -84,7 +84,7 @@ export const LampContainer = ({
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-pink-400 dark:bg-cyan-400 blur-2xl"
+          className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-pink-400 dark:bg-[#5eead4] blur-2xl"
         ></motion.div>
         <motion.div
           initial={{ width: "15rem" }}
@@ -94,7 +94,7 @@ export const LampContainer = ({
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-pink-400 dark:bg-cyan-400"
+          className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-pink-400 dark:bg-[#5eead4]"
         ></motion.div>
 
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-gray-100 dark:bg-gray-950"></div>

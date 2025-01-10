@@ -140,7 +140,7 @@ export const SkeletonThree = () => {
             alt="youtube"
             width={800}
             height={800}
-            className="h-full w-full aspect-square  object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
+            className="h-full w-full aspect-square object-cover  object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
           />
         </div>
       </div>

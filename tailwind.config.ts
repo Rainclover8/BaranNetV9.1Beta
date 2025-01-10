@@ -12,6 +12,12 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily:{
+        sans: ['Dancing Script', 'sans-serif'],
+        vibes: ['Great Vibes', 'serif'],
+        playwrite: ['Playwrite IN', 'serif'],
+        vinyl: ['Rubik Vinyl', 'serif'],
+      },
       animation: {
         aurora: "aurora 60s linear infinite",
       },

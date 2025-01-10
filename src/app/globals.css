@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Playwrite+IN:wght@100..400&family=Rubik+Vinyl&display=swap');
+
+.dancing-script {
+  font-family: 'Dancing Script', serif;
+}
+
+.great-vibes {
+  font-family: 'Great Vibes', serif;
+}
+
+.playwrite-in {
+  font-family: 'Playwrite IN', serif;
+}
+
+.rubik-vinyl {
+  font-family: 'Rubik Vinyl', serif;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;

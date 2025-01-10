@@ -18,21 +18,19 @@ import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState<boolean | null>(null);  // Null başlangıç değeri
+  const [darkMode, setDarkMode] = useState<boolean | null>(null); 
 
   useEffect(() => {
-    // Kullanıcının tercihlerini localStorage'den almak
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
     
-    // Dark mode stilini uygula
     document.documentElement.classList.toggle("dark", isDarkMode);
   }, []);
 
   const toggleDarkMode = () => {
     setDarkMode((prev) => {
       const newDarkMode = !prev;
-      localStorage.setItem("darkMode", JSON.stringify(newDarkMode)); // Yeni durumu localStorage'a kaydet
+      localStorage.setItem("darkMode", JSON.stringify(newDarkMode));
       document.documentElement.classList.toggle("dark", newDarkMode);
       return newDarkMode;
     });
@@ -53,13 +51,13 @@ export default function Home() {
               />
               <FlipWords
                 words={["Full Stack Web Developer", "UI/UX Enthusiast", "Mobile Developer"]}
-                className="lg:text-3xl md:text-xl font-mono text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0"
+                className="lg:text-3xl md:text-xl text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0 font-thin"
               />
 
-              <div className="lg:flex lg:flex-row mt-4 md:flex-col md:flex justify-center items-center gap-2">
+              <div className="lg:flex lg:flex-row  md:flex-col md:flex justify-center items-center gap-2">
                 <Button
                   title="About Me"
-                  className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200"
+                  className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-full z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200 font-bold"
                   link="#about"
                 />
                 <div className="flex md:flex-1 items-center lg:justify-start justify-center mt-3">

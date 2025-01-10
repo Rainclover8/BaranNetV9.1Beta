@@ -14,7 +14,7 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-gray-950 to-gray-700 py-4 bg-clip-text text-center lg:text-4xl font-medium tracking-tight text-transparent dark:from-gray-300 dark:to-gray-500 md:text-xl"
+        className="mt-8 bg-gradient-to-br from-gray-950 to-gray-700 py-4 bg-clip-text text-center lg:text-4xl font-medium tracking-tight text-transparent dark:from-gray-300 dark:to-gray-500 md:text-xl font-mono container mx-auto"
       >
         I'm a dedicated developer who thrives on solving complex problems and continuously learning new technologies. I’m a creative team player who enjoys collaborating with others and sharing knowledge.
 

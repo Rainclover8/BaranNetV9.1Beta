@@ -5,6 +5,7 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -24,11 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black`}
-      >
-        {children}
-      </body>
-    </html>
+  <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black`}>
+    <header>
+      <link rel="icon" href="/logo.png" type="image/x-icon" />
+    </header>
+    {children}
+  </body>
+</html>
+
   );
 }

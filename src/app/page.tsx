@@ -45,7 +45,7 @@ export default function Home() {
           <div className="md:flex justify-around items-center w-full h-full mt-24">
           <Image
               src={darkMode ? "/logo.png" : "/IMG_7202.jpg"}
-              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-28 shadow-2xl shadow-black dark:shadow-white"
+              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-7 shadow-2xl shadow-black dark:shadow-white"
               width={500}
               height={100}
               layout="intrinsic"

@@ -10,32 +10,26 @@ import Link from "next/link";
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Merhaba",
-      description:
-        "Ben Baran Full Stack Web Developerim",
+      title: "Merhaba, Ben Baran!",
+      description: "Full Stack Web Developer olarak hayallerimi kodlarla şekillendiriyorum.",
       skeleton: <SkeletonOne />,
-      className:
-        "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
+      className: "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
     },
     {
-      title: "Kendimden Düşünceler",
-      description:
-        "Güzel kareler",
+      title: "Anılar ve Düşünceler",
+      description: "Hayatımdan kareler ve paylaşmak istediğim hikayeler.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
     {
-      title: "Youtube'dan destek olabilirsiniz...",
-      description:
-        "Eğitim, eğlence, kodlama, oyun",
+      title: "Destek İçin Youtube'a Beklerim!",
+      description: "Kodlama, eğlence ve öğrenme içerikleri için uğrayın.",
       skeleton: <SkeletonThree />,
-      className:
-        "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
+      className: "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
     },
     {
-      title: "İstediğniz Yerde Olun",
-      description:
-        "Nerede olursanız olun bir site uzağınızdayım, Full Stack Web Developer",
+      title: "Her Yerden Ulaşın",
+      description: "Nerede olursanız olun, ben bir tık uzağınızdayım.",
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none",
     },
@@ -44,11 +38,11 @@ export function FeaturesSectionDemo() {
     <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
       <div className="px-8">
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
-          Baran's Room
+        Baran'ın Dünyası
         </h4>
 
         <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-          Merhaba ben Baran Burası Benim birçok işlevli section'ım
+        Merhaba, burası benim dijital alanım. Kodlama, projelerim ve kişisel anılarım burada sizinle.
         </p>
       </div>
 

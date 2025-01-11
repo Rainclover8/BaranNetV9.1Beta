@@ -14,7 +14,7 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-gray-950 to-gray-700 py-4 bg-clip-text text-center lg:text-4xl font-medium tracking-tight text-transparent dark:from-gray-200 dark:to-gray-500 md:text-xl font-mono container mx-auto"
+        className="mt-8 bg-gradient-to-br from-gray-950 to-gray-700 py-4 bg-clip-text text-center lg:text-4xl font-medium tracking-tight text-transparent dark:from-gray-200 dark:to-gray-500 md:text-xl font-mono container mx-auto dark:text-gray-100"
       >
         I'm a dedicated developer who thrives on solving complex problems and continuously learning new technologies. I’m a creative team player who enjoys collaborating with others and sharing knowledge.
 
@@ -40,7 +40,7 @@ export const LampContainer = ({
         className
       )}
     >
-      <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
+      <div className="relative flex w-full flex-1 items-center justify-center isolate z-0 ">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}
@@ -57,6 +57,7 @@ export const LampContainer = ({
           <div className="absolute w-[100%] left-0 bg-gray-100 dark:bg-gray-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
           <div className="absolute w-40 h-[100%] left-0 bg-gray-100 dark:bg-gray-950 bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}
@@ -73,9 +74,8 @@ export const LampContainer = ({
           <div className="absolute w-40 h-[100%] right-0 bg-gray-100 dark:bg-gray-950 bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
           <div className="absolute w-[100%] right-0 bg-gray-100 dark:bg-gray-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
         </motion.div>
-        <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-gray-100 dark:bg-gray-950 blur-2xl"></div>
-        <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
-        <div className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-pink-500 dark:bg-[#4dd0e1] opacity-50 blur-3xl"></div>
+
+        <div className="absolute top-1/2 z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-pink-500 dark:bg-[#4dd0e1] opacity-50 blur-3xl"></div>
         <motion.div
           initial={{ width: "8rem" }}
           whileInView={{ width: "16rem" }}
@@ -86,18 +86,6 @@ export const LampContainer = ({
           }}
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-pink-400 dark:bg-[#5eead4] blur-2xl"
         ></motion.div>
-        <motion.div
-          initial={{ width: "15rem" }}
-          whileInView={{ width: "30rem" }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-pink-400 dark:bg-[#5eead4]"
-        ></motion.div>
-
-        <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-gray-100 dark:bg-gray-950"></div>
       </div>
 
       <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">

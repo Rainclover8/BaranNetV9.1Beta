@@ -95,7 +95,7 @@ const ContactSection = () => {
               placeholder="You are so Handsome!!!"
               value={formData.message}
               onChange={handleChange}
-              className="mt-2 p-3 w-full border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              className="mt-2 p-3 w-full border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white resize-none"
               rows={4}
             ></textarea>
           </div>

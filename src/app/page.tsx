@@ -1,6 +1,7 @@
 "use client";
 
 import { AuroraBackground } from "@/components/aurora-background";
+import ContactSection from "@/components/Contact";
 import { FeaturesSectionDemo } from "@/components/FeaturesSectionDemo";
 import { FlipWords } from "@/components/flip-words";
 import { CardDemo } from "@/components/following-pointer";
@@ -47,7 +48,7 @@ export default function Home() {
               <Image
                 src={darkMode ? "/logo.png" : "/IMG_7202.jpg"}
                 className="border-2 rounded-full backdrop-blur-3xl mb-7 shadow-2xl shadow-black dark:shadow-white md:mx-0 mx-auto md:w-full w-1/2"
-                width={500}
+                width={300}
                 height={100}
                 layout="intrinsic"
                 alt="Logo"
@@ -138,7 +139,10 @@ export default function Home() {
       <div>
         <FeaturesSectionDemo />
       </div>
-
+      <div className="">
+        {/* FORM */}
+        <ContactSection/>
+      </div>
       <div className="fixed top-5 right-5 z-[50]">
         <button
           onClick={toggleDarkMode}

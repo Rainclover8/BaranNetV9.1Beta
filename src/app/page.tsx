@@ -42,7 +42,7 @@ export default function Home() {
     <>
       <div className={darkMode ? "dark" : ""}>
         <AuroraBackground className="bg-white dark:bg-black">
-          <div className="md:flex justify-evenly items-center w-fullh-full mt-24">
+          <div className="md:flex justify-evenly items-center w-full max-h-full mt-24">
             <div className="">
               <Image
                 src={darkMode ? "/logo.png" : "/IMG_7202.jpg"}

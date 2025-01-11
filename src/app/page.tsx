@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatedTestimonials } from "@/components/animated-testimonials";
 import { AuroraBackground } from "@/components/aurora-background";
 import ContactSection from "@/components/Contact";
 import { FeaturesSectionDemo } from "@/components/FeaturesSectionDemo";
@@ -107,7 +108,8 @@ export default function Home() {
       </div>
 
       <div className="mt-9" id="about">
-        <LampDemo />
+        {/* <LampDemo /> */}
+        <AnimatedTestimonials testimonials={[{quote:" Born and raised in Bursa, Turkey, I have a deep passion for music, especially playing the guitar. In my free time, I explore new technologies, play volleyball, and immerse myself in coding projects. I also enjoy traveling, photography, and discovering innovative ways to bring ideas to life.", name:"Baran Çiçek", designation:"I'm a dedicated developer who thrives on solving complex problems and continuously learning new technologies. I’m a creative team player who enjoys collaborating with others and sharing knowledge.", src:"/logo.png"},]} />
       </div>
 
       <div className="container mx-auto mt-24">

@@ -18,12 +18,12 @@ import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState<boolean | null>(null); 
+  const [darkMode, setDarkMode] = useState<boolean | null>(null);
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
-    
+
     document.documentElement.classList.toggle("dark", isDarkMode);
   }, []);
 
@@ -42,15 +42,18 @@ export default function Home() {
     <>
       <div className={darkMode ? "dark" : ""}>
         <AuroraBackground className="bg-white dark:bg-black">
-          <div className="md:flex justify-around items-center w-full h-full mt-24">
-          <Image
-              src={darkMode ? "/logo.png" : "/IMG_7202.jpg"}
-              className="border-2 rounded-full backdrop-blur-3xl mt-4 mb-7 shadow-2xl shadow-black dark:shadow-white"
-              width={500}
-              height={100}
-              layout="intrinsic"
-              alt="Logo"
-            />
+          <div className="md:flex justify-evenly items-center w-full max-h-full mt-24">
+            <div className="">
+              <Image
+                src={darkMode ? "/logo.png" : "/IMG_7202.jpg"}
+                className="border-2 rounded-full backdrop-blur-3xl mb-7 shadow-2xl shadow-black dark:shadow-white md:mx-0 mx-auto md:w-full w-1/2"
+                width={500}
+                height={100}
+                layout="intrinsic"
+                alt="Logo"
+              />
+            </div>
+
             <div className="text-center">
               <TextGenerateEffect
                 duration={3}
@@ -58,7 +61,11 @@ export default function Home() {
                 className="lg:text-7xl md:text-4xl text-xl text-center z-[99] text-black dark:text-white"
               />
               <FlipWords
-                words={["Full Stack Web Developer", "UI/UX Enthusiast", "Mobile Developer"]}
+                words={[
+                  "Full Stack Web Developer",
+                  "UI/UX Enthusiast",
+                  "Mobile Developer",
+                ]}
                 className="lg:text-3xl md:text-xl text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0 font-thin"
               />
 
@@ -93,7 +100,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-           
           </div>
         </AuroraBackground>
         <ShootingStars minSpeed={2} maxSpeed={8} />

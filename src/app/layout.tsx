@@ -85,6 +85,9 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playwrite+IN:wght@100;400&family=Rubik+Vinyl&family=Sansita+Swashed:wght@300;900&display=swap"
           rel="stylesheet"
         />
+        {/* Google ADS */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464195965921155"
+        crossOrigin="anonymous"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black`}

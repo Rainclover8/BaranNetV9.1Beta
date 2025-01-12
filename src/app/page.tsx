@@ -6,7 +6,7 @@ import ContactSection from "@/components/Contact";
 import { FeaturesSectionDemo } from "@/components/FeaturesSectionDemo";
 import { FlipWords } from "@/components/flip-words";
 import { CardDemo } from "@/components/following-pointer";
-import { LampDemo } from "@/components/lamp";
+// import { LampDemo } from "@/components/lamp";
 import { ShootingStars } from "@/components/shooting-stars";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
 import Button from "@/const/Button";
@@ -162,6 +162,7 @@ export default function Home() {
         >
           {darkMode ? <MdLightMode /> : <MdDarkMode />}
         </button>
+
       </div>
     </>
   );

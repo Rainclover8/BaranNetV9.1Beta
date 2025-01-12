@@ -6,30 +6,29 @@ import { motion } from "framer-motion";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Link from "next/link";
 
-
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Merhaba, Ben Baran!",
-      description: "Full Stack Web Developer olarak hayallerimi kodlarla şekillendiriyorum.",
+      title: "Hello, I'm Baran!",
+      description: "As a Full Stack Web Developer, I shape my dreams with code.",
       skeleton: <SkeletonOne />,
       className: "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
     },
     {
-      title: "Anılar ve Düşünceler",
-      description: "Hayatımdan kareler ve paylaşmak istediğim hikayeler.",
+      title: "Memories and Thoughts",
+      description: "Snapshots from my life and stories I want to share.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
     {
-      title: "Destek İçin Youtube'a Beklerim!",
-      description: "Kodlama, eğlence ve öğrenme içerikleri için uğrayın.",
+      title: "Support Me on YouTube!",
+      description: "Visit for coding, fun, and learning content.",
       skeleton: <SkeletonThree />,
-      className: "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
+      className: "col-span-1 lg:col-span-3 lg:border-r dark:border-neutral-800",
     },
     {
-      title: "Her Yerden Ulaşın",
-      description: "Nerede olursanız olun, ben bir tık uzağınızdayım.",
+      title: "Reach Me Anywhere",
+      description: "Wherever you are, I'm just a click away.",
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none",
     },
@@ -38,21 +37,21 @@ export function FeaturesSectionDemo() {
     <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
       <div className="px-8">
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
-        Baran'ın Dünyası
+          Baran's World
         </h4>
 
-        <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-        Merhaba, burası benim dijital alanım. Kodlama, projelerim ve kişisel anılarım burada sizinle.
+        <p className="text-sm lg:text-base max-w-2xl my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
+          Welcome to my digital space. Here, I share my coding journey, projects, and personal stories with you.
         </p>
       </div>
 
-      <div className="relative ">
+      <div className="relative">
         <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">
           {features.map((feature) => (
             <FeatureCard key={feature.title} className={feature.className}>
               <FeatureTitle>{feature.title}</FeatureTitle>
               <FeatureDescription>{feature.description}</FeatureDescription>
-              <div className=" h-full w-full">{feature.skeleton}</div>
+              <div className="h-full w-full">{feature.skeleton}</div>
             </FeatureCard>
           ))}
         </div>
@@ -77,7 +76,7 @@ const FeatureCard = ({
 
 const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <p className=" max-w-5xl mx-auto text-left tracking-tight text-black dark:text-white text-xl md:text-2xl md:leading-snug">
+    <p className="max-w-5xl mx-auto text-left tracking-tight text-black dark:text-white text-xl md:text-2xl md:leading-snug">
       {children}
     </p>
   );
@@ -87,7 +86,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
   return (
     <p
       className={cn(
-        "text-sm md:text-base  max-w-4xl text-left mx-auto",
+        "text-sm md:text-base max-w-4xl text-left mx-auto",
         "text-neutral-500 text-center font-normal dark:text-neutral-300",
         "text-left max-w-sm mx-0 md:text-sm my-2"
       )}
@@ -100,8 +99,8 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 export const SkeletonOne = () => {
   return (
     <div className="relative flex py-8 px-2 gap-10 h-full">
-      <div className="w-full  p-5  mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
-        <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
+      <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
+        <div className="flex flex-1 w-full h-full flex-col space-y-2">
           <Image
             src="/IMG_7212.JPG"
             alt="header"
@@ -123,18 +122,17 @@ export const SkeletonThree = () => {
     <Link
       href="https://www.youtube.com/@raincloverr8"
       target="__blank"
-      className="relative flex gap-10  h-full group/image"
+      className="relative flex gap-10 h-full group/image"
     >
-      <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full">
-        <div className="flex flex-1 w-full h-full flex-col space-y-2  relative">
-         
-          <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
+      <div className="w-full mx-auto bg-transparent dark:bg-transparent group h-full">
+        <div className="flex flex-1 w-full h-full flex-col space-y-2 relative">
+          <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto" />
           <Image
             src="/youtubePng.png"
             alt="youtube"
             width={800}
             height={800}
-            className="h-full w-full aspect-square object-cover  object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
+            className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
           />
         </div>
       </div>
@@ -200,7 +198,7 @@ export const SkeletonTwo = () => {
           >
             <Image
               src={image}
-              alt="Görseller"
+              alt="Images"
               width="500"
               height="500"
               className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
@@ -209,15 +207,15 @@ export const SkeletonTwo = () => {
         ))}
       </div>
 
-      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
-      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
+      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent h-full pointer-events-none" />
+      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black to-transparent h-full pointer-events-none" />
     </div>
   );
 };
 
 export const SkeletonFour = () => {
   return (
-    <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
+    <div className="h-60 md:h-60 flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
       <Globe className="absolute -right-10 md:-right-10 -bottom-80 md:-bottom-72" />
     </div>
   );
@@ -245,9 +243,9 @@ export const Globe = ({ className }: { className?: string }) => {
       markerColor: [0.1, 0.8, 1],
       glowColor: [1, 1, 1],
       markers: [
-        { location: [41.0082, 28.9784], size: 0.05 }, // İstanbul
+        { location: [41.0082, 28.9784], size: 0.05 }, // Istanbul
         { location: [39.9208, 32.8541], size: 0.05 }, // Ankara
-        { location: [38.4192, 27.1287], size: 0.05 }, // İzmir
+        { location: [38.4192, 27.1287], size: 0.05 }, // Izmir
         { location: [40.1828, 29.0664], size: 0.04 }, // Bursa
         { location: [41.0015, 39.7178], size: 0.04 }, // Trabzon
       ],
@@ -261,8 +259,6 @@ export const Globe = ({ className }: { className?: string }) => {
       globe.destroy();
     };
   }, []);
-
-  
 
   return (
     <canvas

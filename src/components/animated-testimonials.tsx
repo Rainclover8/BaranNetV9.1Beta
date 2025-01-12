@@ -27,7 +27,7 @@ export const AnimatedTestimonials = ({
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     const entry = entries[0];
     if (entry.isIntersecting) {
-      setInView(true); // Testimonial ekranda göründü
+      setInView(true);
     }
   };
 

@@ -47,7 +47,7 @@ export default function Home() {
           <div className="md:flex justify-evenly items-center w-full max-h-full mt-24">
             <div className="">
               <Image
-                src={darkMode ? "/barandark.jpg" : "/IMG_7202.jpg"}
+                src={darkMode ? "/barandark.jpg" : "/barandarklogo.jpg"}
                 className="border-2 rounded-full backdrop-blur-3xl mb-7 shadow-2xl shadow-black dark:shadow-purple-200 md:mx-0 mx-auto md:w-full w-1/2"
                 width={300}
                 height={100}
@@ -155,7 +155,7 @@ export default function Home() {
         {/* FORM */}
         <ContactSection />
       </div>
-      <div className="fixed top-5 right-5 z-[50]">
+      <div className="fixed top-5 right-5 z-[999px]">
         <button
           onClick={toggleDarkMode}
           className="p-2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded-full w-10 h-10 flex justify-center items-center duration-200"

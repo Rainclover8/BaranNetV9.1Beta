@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     url: "https://www.barancicek.space",
     images: [
       {
-        url: "/logo.png", // Görsel yolunu doğru şekilde belirtin
-        width: 800, // Opsiyonel: Görselin genişliği
-        height: 600, // Opsiyonel: Görselin yüksekliği
-        alt: "Baran Çiçek Portfolio Logo", // Opsiyonel: Alternatif metin
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Baran Çiçek Portfolio Logo",
       },
     ],
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     site: "@BaranCicek",
     title: "Baran Çiçek | Portfolio",
     description: "Baran Çiçek'in portfolio sitesi.",
-    images: "/logo.png", // Twitter için de aynı görsel kullanılabilir.
+    images: "/logo.png",
   },
 };
 

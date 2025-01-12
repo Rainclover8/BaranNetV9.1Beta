@@ -64,7 +64,7 @@ const ContactSection = () => {
             </label>
             <input
               type="text"
-              name="name"
+              name="user_name"
               placeholder="John Doe"
               value={formData.name}
               onChange={handleChange}
@@ -78,7 +78,7 @@ const ContactSection = () => {
             </label>
             <input
               type="email"
-              name="email"
+              name="user_email"
               placeholder="johnDoe@gmail.com"
               value={formData.email}
               onChange={handleChange}

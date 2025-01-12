@@ -14,8 +14,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Baran Çiçek",
-  description: "Portfolio web design",
+  title: "Baran Çiçek | Portfolio Web Design",
+  description: "Baran Çiçek'in portfolio sitesi. Web tasarımı, kullanıcı deneyimi ve dijital çözümler.",
+  keywords: "Baran Çiçek, Web Design, UI/UX, Portfolio, Frontend Developer, Next.js",
+  openGraph: {
+    title: "Baran Çiçek | Portfolio",
+    description: "Baran Çiçek'in portfolio sitesi. Web tasarımı ve dijital projeler.",
+    url: "https://www.barancicek.space",
+    images: [
+      {
+        url: "/logo.png", // Görsel yolunu doğru şekilde belirtin
+        width: 800, // Opsiyonel: Görselin genişliği
+        height: 600, // Opsiyonel: Görselin yüksekliği
+        alt: "Baran Çiçek Portfolio Logo", // Opsiyonel: Alternatif metin
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@BaranCicek",
+    title: "Baran Çiçek | Portfolio",
+    description: "Baran Çiçek'in portfolio sitesi.",
+    images: "/logo.png", // Twitter için de aynı görsel kullanılabilir.
+  },
 };
 
 export default function RootLayout({
@@ -39,6 +61,24 @@ export default function RootLayout({
 
         {/* Favicon */}
         <link rel="icon" href="/ben.png" type="image/x-icon" />
+
+        {/* Meta Tags */}
+        <meta name="description" content="Baran Çiçek'in portfolio sitesi. Web tasarımı, kullanıcı deneyimi ve dijital çözümler." />
+        <meta name="keywords" content="Baran Çiçek, Web Design, UI/UX, Portfolio, Frontend Developer, Next.js" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Baran Çiçek | Portfolio" />
+        <meta property="og:description" content="Baran Çiçek'in portfolio sitesi. Web tasarımı ve dijital projeler." />
+        <meta property="og:url" content="https://www.barancicek.space" />
+        <meta property="og:image" content="public/logo.png" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@BaranCicek" />
+        <meta name="twitter:title" content="Baran Çiçek | Portfolio" />
+        <meta name="twitter:description" content="Baran Çiçek'in portfolio sitesi." />
+        <meta name="twitter:image" content="public/logo.png" />
 
         {/* Google Fonts */}
         <link

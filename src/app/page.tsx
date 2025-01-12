@@ -49,7 +49,7 @@ export default function Home() {
               <Image
                 src={darkMode ? "/barandark.jpg" : "/barandarklogo.jpg"}
                 className="border-2 rounded-full backdrop-blur-3xl mb-7 shadow-2xl shadow-black dark:shadow-purple-200 md:mx-0 mx-auto"
-                width={400}
+                width={350}
                 height={100}
                 layout="intrinsic"
                 alt="Logo"
@@ -71,7 +71,7 @@ export default function Home() {
                 className="lg:text-3xl md:text-xl text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0 font-playwrite"
               />
 
-              <div className="lg:flex lg:flex-row  md:flex-col md:flex justify-center items-center gap-2">
+              <div className="lg:flex lg:flex-row  md:flex-col md:flex justify-center items-center gap-2 mb-3">
                 <Button
                   title="About Me"
                   className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-lg z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200 font-mono font-semibold italic"

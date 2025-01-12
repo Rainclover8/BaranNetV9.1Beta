@@ -58,11 +58,12 @@ export const AnimatedTestimonials = ({
   };
 
   return (
+    // font-mono
     <div
       ref={testimonialRef}
-      className="max-w-sm md:max-w-4xl mx-auto antialiased font-mono px-4 md:px-8 lg:px-12 py-20"
+      className="max-w-sm md:max-w-4xl mx-auto antialiased font-serif px-4 md:px-8 lg:px-12 py-20"
     >
-      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -130,13 +131,13 @@ export const AnimatedTestimonials = ({
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-2xl font-bold dark:text-white text-black">
+            <h3 className="text-4xl font-bold dark:text-white text-black">
               {testimonials[active].name}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <p className="text-sm text-gray-500 dark:text-neutral-500 mt-1">
               {testimonials[active].designation}
             </p>
-            <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
+            <motion.p className="text-xl text-gray-500 mt-8 dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

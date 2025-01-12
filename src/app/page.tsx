@@ -155,10 +155,10 @@ export default function Home() {
         {/* FORM */}
         <ContactSection />
       </div>
-      <div className="fixed top-5 right-5 z-[999px]">
+      <div className="fixed top-5 right-5 z-[999]">
         <button
           onClick={toggleDarkMode}
-          className="p-2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded-full w-10 h-10 flex justify-center items-center duration-200"
+          className="p-2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded-full w-10 h-10 flex justify-center items-center duration-200 "
         >
           {darkMode ? <MdLightMode /> : <MdDarkMode />}
         </button>

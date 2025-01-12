@@ -13,10 +13,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        sans: ['Dancing Script', 'sans-serif'],
-        vibes: ['Great Vibes', 'serif'],
-        playwrite: ['Playwrite IN', 'serif'],
-        vinyl: ['Rubik Vinyl', 'serif'],
+        sans: ["Dancing Script", ...defaultTheme.fontFamily.sans],
+        vibes: ["Great Vibes", ...defaultTheme.fontFamily.serif],
+        playwrite: ["Playwrite IN", ...defaultTheme.fontFamily.serif],
+        vinyl: ["Rubik Vinyl", ...defaultTheme.fontFamily.serif],
+        sans2: ["Sansita Swashed", ...defaultTheme.fontFamily.serif],
       },
       animation: {
         aurora: "aurora 60s linear infinite",

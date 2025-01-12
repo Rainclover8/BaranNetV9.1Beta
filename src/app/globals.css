@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Playwrite+IN:wght@100..400&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Playwrite+IN:wght@100..400&family=Rubik+Vinyl&family=Sansita+Swashed:wght@300..900&display=swap');
+
+
+.sansita-swashed{
+  font-family: "Sansita Swashed", serif;
+}
 
 .dancing-script {
   font-family: 'Dancing Script', serif;

@@ -245,8 +245,11 @@ export const Globe = ({ className }: { className?: string }) => {
       markerColor: [0.1, 0.8, 1],
       glowColor: [1, 1, 1],
       markers: [
-        { location: [37.7595, -122.4367], size: 0.03 },
-        { location: [40.7128, -74.006], size: 0.1 },
+        { location: [41.0082, 28.9784], size: 0.05 }, // İstanbul
+        { location: [39.9208, 32.8541], size: 0.05 }, // Ankara
+        { location: [38.4192, 27.1287], size: 0.05 }, // İzmir
+        { location: [40.1828, 29.0664], size: 0.04 }, // Bursa
+        { location: [41.0015, 39.7178], size: 0.04 }, // Trabzon
       ],
       onRender: (state) => {
         state.phi = phi;
@@ -258,6 +261,8 @@ export const Globe = ({ className }: { className?: string }) => {
       globe.destroy();
     };
   }, []);
+
+  
 
   return (
     <canvas

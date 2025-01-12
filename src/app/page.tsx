@@ -56,7 +56,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="text-center">
+            <div className="">
               <TextGenerateEffect
                 duration={3}
                 words="BARAN ÇİÇEK"
@@ -68,13 +68,13 @@ export default function Home() {
                   "UI/UX Enthusiast",
                   "Mobile Developer",
                 ]}
-                className="lg:text-3xl md:text-xl text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0 font-thin"
+                className="lg:text-3xl md:text-xl text-black dark:text-white block ms-4 lg:text-start text-center p-0 m-0 font-serif"
               />
 
               <div className="lg:flex lg:flex-row  md:flex-col md:flex justify-center items-center gap-2">
                 <Button
                   title="About Me"
-                  className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-lg z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200 font-sans"
+                  className="px-6 py-2 mt-3 bg-black text-white dark:text-black dark:bg-white rounded-lg z-[99999] cursor-pointer block relative mx-auto lg:mx-0 hover:scale-110 duration-200 font-mono"
                   link="#about"
                 />
                 <div className="flex md:flex-1 items-center lg:justify-start justify-center mt-3">
@@ -109,12 +109,22 @@ export default function Home() {
 
       <div className="mt-9" id="about">
         {/* <LampDemo /> */}
-        <AnimatedTestimonials testimonials={[{quote:" Born and raised in Bursa, Turkey, I have a deep passion for music, especially playing the guitar. In my free time, I explore new technologies, play volleyball, and immerse myself in coding projects. I also enjoy traveling, photography, and discovering innovative ways to bring ideas to life.", name:"Baran Çiçek", designation:"I'm a dedicated developer who thrives on solving complex problems and continuously learning new technologies. I’m a creative team player who enjoys collaborating with others and sharing knowledge.", src:"/logo.png"},]} />
+        <AnimatedTestimonials
+          testimonials={[
+            {
+              quote:
+                "Born in Trabzon and currently living in Bursa, I’m passionate about crafting seamless web and mobile experiences. I specialize in UI/UX design and enjoy bringing ideas to life with innovative and user-friendly designs.",
+              name: "Baran Çiçek",
+              designation: "Web & Mobile Developer | UI/UX Designer",
+              src: "/logo.png",
+            },
+          ]}
+        />
       </div>
 
       <div className="container mx-auto mt-24">
         <h1 className="lg:text-4xl font-extrabold md:text-2xl text-xl text-black dark:text-white">
-          Project's
+          Projects
         </h1>
         <div className="mt-12 flex items-center gap-4 flex-wrap lg:justify-start justify-center">
           <div className="flex gap-5 lg:justify-start flex-wrap justify-center items-center w-full lg:p-0 p-4">
@@ -143,7 +153,7 @@ export default function Home() {
       </div>
       <div className="">
         {/* FORM */}
-        <ContactSection/>
+        <ContactSection />
       </div>
       <div className="fixed top-5 right-5 z-[50]">
         <button

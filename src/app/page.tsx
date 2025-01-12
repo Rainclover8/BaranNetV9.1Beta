@@ -45,11 +45,11 @@ export default function Home() {
       <div className={`${darkMode ? "dark" : ""} overflow-hidden`}>
         <AuroraBackground className="bg-white dark:bg-black">
           <div className="md:flex justify-evenly items-center w-full max-h-full mt-24">
-            <div className="">
+            <div className="px-2">
               <Image
                 src={darkMode ? "/barandark.jpg" : "/barandarklogo.jpg"}
-                className="border-2 rounded-full backdrop-blur-3xl mb-7 shadow-2xl shadow-black dark:shadow-purple-200 md:mx-0 mx-auto md:w-full w-1/2"
-                width={300}
+                className="border-2 rounded-full backdrop-blur-3xl mb-7 shadow-2xl shadow-black dark:shadow-purple-200 md:mx-0 mx-auto"
+                width={400}
                 height={100}
                 layout="intrinsic"
                 alt="Logo"

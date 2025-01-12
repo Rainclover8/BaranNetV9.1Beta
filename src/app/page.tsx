@@ -64,7 +64,7 @@ export default function Home() {
               />
               <FlipWords
                 words={[
-                  "Full Stack Web Developer . . .",
+                  "Full Stack Web Developer...",
                   "UI/UX Enthusiast",
                   "Mobile Developer",
                 ]}

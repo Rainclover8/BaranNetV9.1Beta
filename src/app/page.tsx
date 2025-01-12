@@ -116,7 +116,7 @@ export default function Home() {
                 "Born in Trabzon and currently living in Bursa, I’m passionate about crafting seamless web and mobile experiences. I specialize in UI/UX design and enjoy bringing ideas to life with innovative and user-friendly designs.",
               name: "Baran Çiçek",
               designation: "Web & Mobile Developer | UI/UX Designer",
-              src: "/logo.png",
+              src: "/IMG_2287.jpg",
             },
           ]}
         />

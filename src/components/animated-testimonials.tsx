@@ -23,7 +23,7 @@ export const AnimatedTestimonials = ({
   const [inView, setInView] = useState(false);
   const testimonialRef = useRef(null);
 
-  // Intersection Observer callback
+
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     const entry = entries[0];
     if (entry.isIntersecting) {
@@ -48,13 +48,6 @@ export const AnimatedTestimonials = ({
     };
   }, []);
 
-  const handleNext = () => {
-    setActive((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const handlePrev = () => {
-    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   const isActive = (index: number) => {
     return index === active;
@@ -110,7 +103,7 @@ export const AnimatedTestimonials = ({
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
+                    className="h-full w-full rounded-3xl object-cover object-top "
                   />
                 </motion.div>
               ))}

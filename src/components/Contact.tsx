@@ -6,8 +6,8 @@ import emailjs from "emailjs-com";
 const ContactSection = () => {
   const [loader, setLoader] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     message: "",
   });
   const [status, setStatus] = useState("");
@@ -36,7 +36,7 @@ const ContactSection = () => {
         (result) => {
           setStatus("Message sent successfully!");
           setLoader(true);
-          setFormData({ name: "", email: "", message: "" });
+          setFormData({ user_name: "", user_email: "", message: "" });
           setLoader(false);
         },
         (error) => {
@@ -66,7 +66,7 @@ const ContactSection = () => {
               type="text"
               name="user_name"
               placeholder="John Doe"
-              value={formData.name}
+              value={formData.user_name}
               onChange={handleChange}
               className="mt-2 p-3 w-full border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             />
@@ -80,7 +80,7 @@ const ContactSection = () => {
               type="email"
               name="user_email"
               placeholder="johnDoe@gmail.com"
-              value={formData.email}
+              value={formData.user_email}
               onChange={handleChange}
               className="mt-2 p-3 w-full border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             />

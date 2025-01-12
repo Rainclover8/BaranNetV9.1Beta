@@ -29,7 +29,7 @@ export default function RootLayout({
   <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black`}>
     
     <header>
-      <link rel="icon" href="/logo.png" type="image/x-icon" />
+      <link rel="icon" href="/ben.png" type="image/x-icon" />
       <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playwrite+IN:wght@100;400&family=Rubik+Vinyl&family=Sansita+Swashed:wght@300;900&display=swap" rel="stylesheet"/>
 
     </header>

@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black`}
       >
-        <Head>
+        <head>
           {/* Google Analytics */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCTF95BKYT"></script>
           <script>
@@ -48,7 +48,7 @@ export default function RootLayout({
             href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playwrite+IN:wght@100;400&family=Rubik+Vinyl&family=Sansita+Swashed:wght@300;900&display=swap"
             rel="stylesheet"
           />
-        </Head>
+        </head>
         {children}
       </body>
     </html>

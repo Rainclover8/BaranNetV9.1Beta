@@ -25,6 +25,13 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Input validation
+    if (!formData.user_name || !formData.user_email || !formData.message) {
+      setStatus("Please fill in all fields.");
+      return;
+    }
+
+    setLoader(true);
     emailjs
       .sendForm(
         "service_2sz8rpg",
@@ -35,14 +42,15 @@ const ContactSection = () => {
       .then(
         (result) => {
           setStatus("Message sent successfully!");
-          setLoader(true);
           setFormData({ user_name: "", user_email: "", message: "" });
-          setLoader(false);
         },
         (error) => {
           setStatus("Failed to send message. Please try again later.");
         }
-      );
+      )
+      .finally(() => {
+        setLoader(false);
+      });
   };
 
   return (
@@ -105,7 +113,7 @@ const ContactSection = () => {
               type="submit"
               className="px-6 py-3 bg-indigo-500 text-white rounded-full hover:bg-indigo-700 dark:hover:bg-indigo-400 transition"
             >
-              Send Message
+              {loader ? "Sending..." : "Send Message"}
             </button>
           </div>
         </form>

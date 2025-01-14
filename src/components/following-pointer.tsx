@@ -21,7 +21,7 @@ export function CardDemo({ url, title, desc, time, link, sub_title }: card) {
       >
       <div
         className="cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl max-w-sm mx-auto flex flex-col justify-between p-4"
-        style={{ backgroundImage: `url(${url})`, backgroundSize: "cover" }}
+        style={{ backgroundImage: `url(${url})`, backgroundSize: "cover", backgroundPosition:"center" }}
       >
         <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
         <div className="flex flex-row items-center space-x-4 z-10">

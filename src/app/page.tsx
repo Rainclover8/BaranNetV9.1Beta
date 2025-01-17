@@ -56,7 +56,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="main-section">
+            <div className="">
               <TextGenerateEffect
                 duration={3}
                 words="BARAN ÇİÇEK"

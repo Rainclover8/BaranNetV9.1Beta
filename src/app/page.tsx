@@ -151,7 +151,7 @@ export default function Home() {
       <div>
         <FeaturesSectionDemo />
       </div>
-      <div className="">
+      <div>
         {/* FORM */}
         <ContactSection />
       </div>
@@ -162,7 +162,6 @@ export default function Home() {
         >
           {darkMode ? <MdLightMode /> : <MdDarkMode />}
         </button>
-
       </div>
     </>
   );

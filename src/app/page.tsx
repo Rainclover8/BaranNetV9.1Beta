@@ -151,7 +151,7 @@ export default function Home() {
       <div>
         <FeaturesSectionDemo />
       </div>
-      <div className="contact-section">
+      <div className="">
         {/* FORM */}
         <ContactSection />
       </div>

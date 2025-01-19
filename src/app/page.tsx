@@ -144,6 +144,15 @@ export default function Home() {
               sub_title="Emoji Questions"
               time="19.04.2024"
             />
+
+            <CardDemo
+              link="https://inspire-nine.vercel.app/"
+              url="/inspire.png"
+              title="Inspire Me"
+              desc="İlham verici İngilizce sözler sunan modern ve minimalist bir uygulama. Günlük motivasyonunuzu alın!"
+              sub_title="Motivasyon Uygulaması"
+              time="19.01.2025"
+            />
           </div>
         </div>
       </div>

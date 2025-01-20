@@ -152,6 +152,14 @@ export default function Home() {
               sub_title="Motivasyon Uygulaması"
               time="19.01.2025"
             />
+            <CardDemo
+              link="https://planner-ai-eta.vercel.app/"
+              url="/planner.png"
+              title="Study Planner"
+              desc="Sınav hazırlıklarınız için kişiselleştirilmiş bir çalışma programı oluşturun. Planlayın, takip edin ve hedeflerinize ulaşın!"
+              sub_title="Çalışma Planlayıcı"
+              time="20.01.2025"
+            />
           </div>
         </div>
       </div>

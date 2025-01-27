@@ -1,9 +1,8 @@
 "use client";
-
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
+import DecryptedText from "./DecryptedText";
 
 type Testimonial = {
   quote: string;
@@ -132,7 +131,13 @@ export const AnimatedTestimonials = ({
             }}
           >
             <h3 className="text-4xl font-bold dark:text-white text-black">
-              {testimonials[active].name}
+              <DecryptedText
+              text={testimonials[active].name}
+              animateOn="view"
+              revealDirection="start"
+              speed={100}
+              sequential={true}
+             />
             </h3>
             <p className="text-sm text-gray-500 dark:text-neutral-500 mt-1">
               {testimonials[active].designation}

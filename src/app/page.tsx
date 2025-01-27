@@ -3,6 +3,7 @@
 import { AnimatedTestimonials } from "@/components/animated-testimonials";
 import { AuroraBackground } from "@/components/aurora-background";
 import ContactSection from "@/components/Contact";
+import DecryptedText from "@/components/DecryptedText";
 import { FeaturesSectionDemo } from "@/components/FeaturesSectionDemo";
 import { FlipWords } from "@/components/flip-words";
 import { CardDemo } from "@/components/following-pointer";
@@ -108,6 +109,7 @@ export default function Home() {
       </div>
 
       <div className="mt-9" id="about">
+  
         {/* <LampDemo /> */}
         <AnimatedTestimonials
           testimonials={[

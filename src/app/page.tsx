@@ -3,9 +3,10 @@
 import { AnimatedTestimonials } from "@/components/animated-testimonials";
 import { AuroraBackground } from "@/components/aurora-background";
 import ContactSection from "@/components/Contact";
-import DecryptedText from "@/components/DecryptedText";
+// import DecryptedText from "@/components/DecryptedText";
 import { FeaturesSectionDemo } from "@/components/FeaturesSectionDemo";
 import { FlipWords } from "@/components/flip-words";
+import { Card, FocusCards } from "@/components/focus-cards";
 import { CardDemo } from "@/components/following-pointer";
 // import { LampDemo } from "@/components/lamp";
 import { ShootingStars } from "@/components/shooting-stars";
@@ -13,6 +14,7 @@ import { TextGenerateEffect } from "@/components/text-generate-effect";
 import Button from "@/const/Button";
 import Socials from "@/const/Socials";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
@@ -22,14 +24,14 @@ import { MdDarkMode } from "react-icons/md";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState<boolean | null>(null);
-
+  const nameOfLink = 2
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
 
     document.documentElement.classList.toggle("dark", isDarkMode);
   }, []);
-
+  
   const toggleDarkMode = () => {
     setDarkMode((prev) => {
       const newDarkMode = !prev;
@@ -115,7 +117,7 @@ export default function Home() {
           testimonials={[
             {
               quote:
-                "Born in Trabzon and currently living in Bursa, I’m passionate about crafting seamless web and mobile experiences. I specialize in UI/UX design and enjoy bringing ideas to life with innovative and user-friendly designs.",
+                "Born in Trabzon and currently living in Bursa, I'm passionate about crafting seamless web and mobile experiences. I specialize in UI/UX design and enjoy bringing ideas to life with innovative and user-friendly designs.",
               name: "Baran Çiçek",
               designation: "Web & Mobile Developer | UI/UX Designer",
               src: "/IMG_2287.jpg",

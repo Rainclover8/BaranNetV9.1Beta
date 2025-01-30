@@ -162,7 +162,7 @@ export const SkeletonTwo = () => {
   };
   return (
     <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
-      <div className="flex flex-row -ml-20">
+      <Link className="flex flex-row -ml-20" href={`/photos/`}>
         {images.map((image, idx) => (
           <motion.div
             variants={imageVariants}
@@ -183,8 +183,8 @@ export const SkeletonTwo = () => {
             />
           </motion.div>
         ))}
-      </div>
-      <div className="flex flex-row">
+      </Link>
+      <Link className="flex flex-row" href={`/photos/`}>
         {images.map((image, idx) => (
           <motion.div
             key={"images-second" + idx}
@@ -205,7 +205,7 @@ export const SkeletonTwo = () => {
             />
           </motion.div>
         ))}
-      </div>
+      </Link>
 
       <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent h-full pointer-events-none" />
       <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black to-transparent h-full pointer-events-none" />

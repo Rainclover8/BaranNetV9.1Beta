@@ -14,7 +14,6 @@ import { TextGenerateEffect } from "@/components/text-generate-effect";
 import Button from "@/const/Button";
 import Socials from "@/const/Socials";
 import Image from "next/image";
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
@@ -24,7 +23,6 @@ import { MdDarkMode } from "react-icons/md";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState<boolean | null>(null);
-  const nameOfLink = 2
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);

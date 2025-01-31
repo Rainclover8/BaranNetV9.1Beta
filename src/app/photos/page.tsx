@@ -12,20 +12,16 @@ function page() {
       src: "/barandarklogo.jpg",
     },
     {
-      title: "BARA12312NS1 ROOMS1",
-      src: "/barandarklogo.jpg",
+      title: "Istanbul",
+      src: "/image3.jpg",
     },
     {
-      title: "BA22RANS2 ROOMS1",
-      src: "/barandarklogo.jpg",
+      title: "Pablo",
+      src: "/image4.jpg",
     },
     {
-      title: "BARA11NS3 ROOMS1",
-      src: "/barandarklogo.jpg",
-    },
-    {
-      title: "BAR2ANS1 4ROOMS1",
-      src: "/barandarklogo.jpg",
+      title: "A Tree",
+      src: "/image5.jpg",
     },
   ];
   return (

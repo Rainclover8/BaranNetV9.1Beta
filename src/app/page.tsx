@@ -8,6 +8,7 @@ import { FeaturesSectionDemo } from "@/components/FeaturesSectionDemo";
 import { FlipWords } from "@/components/flip-words";
 import { Card, FocusCards } from "@/components/focus-cards";
 import { CardDemo } from "@/components/following-pointer";
+import Loader from "@/components/Loader";
 // import { LampDemo } from "@/components/lamp";
 import { ShootingStars } from "@/components/shooting-stars";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
@@ -23,12 +24,24 @@ import { MdDarkMode } from "react-icons/md";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState<boolean | null>(null);
+  const [loader, setLoader] = useState(true)
+  
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
-
     document.documentElement.classList.toggle("dark", isDarkMode);
+  
+    const handleLoad = () => {
+      setLoader(false);
+    };
+  
+    window.addEventListener("load", handleLoad);
+  
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
   }, []);
+  
   
   const toggleDarkMode = () => {
     setDarkMode((prev) => {
@@ -43,7 +56,14 @@ export default function Home() {
 
   return (
     <>
-      <div className={`${darkMode ? "dark" : ""} overflow-hidden`}>
+    <div className="">
+      {loader ? (
+        <div className="flex justify-center items-center h-screen bg-red-50">
+            <Loader/>
+        </div>
+      ) : (
+        <div className="">
+            <div className={`${darkMode ? "dark" : ""} overflow-hidden`}>
         <AuroraBackground className="bg-white dark:bg-black">
           <div className="md:flex justify-evenly items-center w-full max-h-full mt-24">
             <div className="px-2">
@@ -181,6 +201,11 @@ export default function Home() {
           {darkMode ? <MdLightMode /> : <MdDarkMode />}
         </button>
       </div>
+        </div>
+      ) }
+
+   
+    </div>
     </>
   );
 }

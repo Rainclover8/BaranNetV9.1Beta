@@ -24,19 +24,16 @@ import { MdDarkMode } from "react-icons/md";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState<boolean | null>(null);
-  const [loader, setLoader] = useState(true)
+  const [loader, setLoader] = useState<boolean>(true);
   
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
     document.documentElement.classList.toggle("dark", isDarkMode);
-  
-    const handleLoad = () => {
-      setLoader(false);
-    };
-  
+    
+    const handleLoad = () => setLoader(false);
     window.addEventListener("load", handleLoad);
-  
+
     return () => {
       window.removeEventListener("load", handleLoad);
     };

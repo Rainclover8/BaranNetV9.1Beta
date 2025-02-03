@@ -30,14 +30,13 @@ export default function Home() {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
     document.documentElement.classList.toggle("dark", isDarkMode);
-    
-    const handleLoad = () => setLoader(false);
-    window.addEventListener("load", handleLoad);
-
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
+  
+    // 2 saniye sonra loader'ı kapat
+    const timeout = setTimeout(() => setLoader(false), 2000);
+  
+    return () => clearTimeout(timeout);
   }, []);
+  
   
   
   const toggleDarkMode = () => {

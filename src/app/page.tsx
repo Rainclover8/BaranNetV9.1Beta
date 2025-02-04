@@ -31,8 +31,7 @@ export default function Home() {
     setDarkMode(isDarkMode);
     document.documentElement.classList.toggle("dark", isDarkMode);
   
-    // 2 saniye sonra loader'ı kapat
-    const timeout = setTimeout(() => setLoader(false), 5000);
+    const timeout = setTimeout(() => setLoader(false), 3000);
   
     return () => clearTimeout(timeout);
   }, []);

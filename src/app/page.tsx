@@ -33,21 +33,13 @@ export default function Home() {
     setDarkMode(isDarkMode);
     document.documentElement.classList.toggle("dark", isDarkMode);
 
-    const handleLoad = () => {
+    // Loader'ı 3 saniye boyunca göster
+    const timer = setTimeout(() => {
       setLoader(false);
-    };
-
-    // Sayfa geçişlerinde loader'ı göster
-    const handleBeforeUnload = () => {
-      setLoader(true);
-    };
-
-    window.addEventListener('load', handleLoad);
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    }, 3000);
 
     return () => {
-      window.removeEventListener('load', handleLoad);
-      window.removeEventListener('beforeunload', handleBeforeUnload);
+      clearTimeout(timer); // Temizleme işlemi
     };
   }, []);
 

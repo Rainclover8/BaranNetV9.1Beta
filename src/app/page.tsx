@@ -38,15 +38,11 @@ export default function Home() {
     };
 
     // Sayfa geçişlerinde loader'ı göster
-    const handleRouteChange = () => {
-      setLoader(true);
-    };
-
-    window.addEventListener('load', handleLoad);
     const handleBeforeUnload = () => {
       setLoader(true);
     };
 
+    window.addEventListener('load', handleLoad);
     window.addEventListener('beforeunload', handleBeforeUnload);
 
     return () => {

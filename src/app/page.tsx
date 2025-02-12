@@ -37,10 +37,21 @@ export default function Home() {
       setLoader(false);
     };
 
+    // Sayfa geçişlerinde loader'ı göster
+    const handleRouteChange = () => {
+      setLoader(true);
+    };
+
     window.addEventListener('load', handleLoad);
+    const handleBeforeUnload = () => {
+      setLoader(true);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
 
     return () => {
       window.removeEventListener('load', handleLoad);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
 

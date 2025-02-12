@@ -21,23 +21,29 @@ import { FaGithub } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
+import { useRouter } from 'next/navigation';
+
 export default function Home() {
+  const router = useRouter();
   const [darkMode, setDarkMode] = useState<boolean | null>(null);
-  
   const [loader, setLoader] = useState<boolean>(true);
+  
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
     document.documentElement.classList.toggle("dark", isDarkMode);
 
-    // Sayfa yüklendiğinde loader'ı kapat
-    const handleLoad = () => setLoader(false);
+    const handleLoad = () => {
+      setLoader(false);
+    };
+
     window.addEventListener('load', handleLoad);
 
     return () => {
       window.removeEventListener('load', handleLoad);
     };
   }, []);
+
   const toggleDarkMode = () => {
     setDarkMode((prev) => {
       const newDarkMode = !prev;
@@ -103,6 +109,7 @@ export default function Home() {
                       height={100}
                       layout="intrinsic"
                       alt="Logo"
+                      onLoad={() => setLoader(false)}
                     />
                   </div>
 

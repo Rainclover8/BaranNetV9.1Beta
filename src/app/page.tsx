@@ -90,7 +90,7 @@ export default function Home() {
       desc: "Psikolojik danışmanlık ve terapi hizmetleri ile çocuk, ergen, yetişkin ve evlilik terapileri hakkında bilgi alın.",
       sub_title: "Psikolojik Danışman",
       time: "07.02.2025",
-      textColor:"black"
+      textColor: "black"
     },
     
   ];

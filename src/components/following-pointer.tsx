@@ -1,5 +1,4 @@
 "use client";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "../../node_modules/next/link";
 
@@ -10,9 +9,7 @@ interface card {
   time: string;
   link:string;
   sub_title:string;
-  textColor:String;
-  // BURAYA O TEXT COLOR U EKLEYİP EĞER VARSA RENGİ DEĞİŞTİR YOKSA DOKUNMA!!
-  
+  textColor?:string;  
 }
 
 export function CardDemo({ url, title, desc, time, link, sub_title, textColor }: card) {

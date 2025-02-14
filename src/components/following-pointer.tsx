@@ -10,9 +10,12 @@ interface card {
   time: string;
   link:string;
   sub_title:string;
+  textColor:String;
+  // BURAYA O TEXT COLOR U EKLEYİP EĞER VARSA RENGİ DEĞİŞTİR YOKSA DOKUNMA!!
+  
 }
 
-export function CardDemo({ url, title, desc, time, link, sub_title }: card) {
+export function CardDemo({ url, title, desc, time, link, sub_title, textColor }: card) {
   return (
     <div className="max-w-xs w-full group/card">
       <Link
@@ -33,17 +36,17 @@ export function CardDemo({ url, title, desc, time, link, sub_title }: card) {
             className="h-10 w-10 rounded-full border-2 object-cover"
           />
           <div className="flex flex-col">
-            <p className="font-normal text-base text-gray-50 relative z-10">
+            <p className={`font-normal text-base relative z-10 ${textColor? "text-black" : "text-white"} `}>
               {title}
             </p>
-            <p className="text-sm text-gray-400">{time}</p>
+            <p className={`text-sm ${textColor? "text-black" : "text-white"} `}>{time}</p>
           </div>
         </div>
         <div className="text content">
-          <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+          <h1 className={`font-bold text-xl md:text-2xl relative z-10 ${textColor? "text-black" : "text-white"} `}>
             {sub_title}
           </h1>
-          <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
+          <p className={`font-normal text-sm  relative z-10 my-4 ${textColor ? "text-black" : "text-white"}`}>
             {desc}
           </p>
         </div>

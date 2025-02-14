@@ -6,7 +6,6 @@ import ContactSection from "@/components/Contact";
 // import DecryptedText from "@/components/DecryptedText";
 import { FeaturesSectionDemo } from "@/components/FeaturesSectionDemo";
 import { FlipWords } from "@/components/flip-words";
-import { Card, FocusCards } from "@/components/focus-cards";
 import { CardDemo } from "@/components/following-pointer";
 import Loader from "@/components/Loader";
 // import { LampDemo } from "@/components/lamp";
@@ -60,14 +59,14 @@ export default function Home() {
       sub_title: "Oto Kurtarma",
       time: "10.12.2024",
     },
-    {
-      link:"https://emojify-seven.vercel.app/",
-      url:"/emojify.png",
-      title:"Emojfy",
-      desc:"Bu emojiler hangi şarkıya ait? 🎵🤔 Tahmin edebilir misiniz?",
-      sub_title:"Emoji Questions",
-      time:"19.04.2024",
-    },
+    // {
+    //   link:"https://emojify-seven.vercel.app/",
+    //   url:"/emojify.png",
+    //   title:"Emojfy",
+    //   desc:"Bu emojiler hangi şarkıya ait? 🎵🤔 Tahmin edebilir misiniz?",
+    //   sub_title:"Emoji Questions",
+    //   time:"19.04.2024",
+    // },
     {
       link: "https://inspire-me-taupe.vercel.app/",
       url: "/inspire.png",
@@ -84,6 +83,16 @@ export default function Home() {
       sub_title: "Çalışma Planlayıcı",
       time: "20.01.2025",
     },
+    {
+      link: "https://nurcancicek.com/",
+      url: "/nurcanciceklogo.png",
+      title: "Dr. Psikolojik Danışman Nurcan Çiçek",
+      desc: "Psikolojik danışmanlık ve terapi hizmetleri ile çocuk, ergen, yetişkin ve evlilik terapileri hakkında bilgi alın.",
+      sub_title: "Psikolojik Danışman",
+      time: "07.02.2025",
+      textColor:"black"
+    },
+    
   ];
 
   if (darkMode === null) return null;
@@ -194,6 +203,7 @@ export default function Home() {
                         desc={card.desc}
                         sub_title={card.sub_title}
                         time={card.time}
+                        textColor={card.textColor}
                       />
                       </span>
                     );

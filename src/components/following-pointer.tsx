@@ -10,6 +10,7 @@ interface card {
   link:string;
   sub_title:string;
   textColor?:string;  
+  // dark mode light mode için ektra bir belki bir şeyler || Hover olunca da bi düzenleme
 }
 
 export function CardDemo({ url, title, desc, time, link, sub_title, textColor }: card) {

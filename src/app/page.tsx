@@ -59,7 +59,7 @@ export default function Home() {
       sub_title: "Oto Kurtarma",
       time: "10.12.2024",
     },
-    // {
+    // ! Back end patladı {
     //   link:"https://emojify-seven.vercel.app/",
     //   url:"/emojify.png",
     //   title:"Emojfy",

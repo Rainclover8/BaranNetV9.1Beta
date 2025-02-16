@@ -7,4 +7,3 @@ Host: https://www.barancicek.space/
 
 # Sitemaps
 Sitemap: https://www.barancicek.space/sitemap.xml
-

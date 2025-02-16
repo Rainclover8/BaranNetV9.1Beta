@@ -3,3 +3,4 @@ module.exports = {
     generateRobotsTxt: true,
   };
   
+  // sitemap eklendi ne işe yarıyor bilmiyorum!

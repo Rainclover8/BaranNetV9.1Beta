@@ -65,6 +65,9 @@ export default function RootLayout({
         {/* Meta Tags */}
         <meta name="description" content="Baran Çiçek'in portfolio sitesi. Web tasarımı, kullanıcı deneyimi ve dijital çözümler." />
         <meta name="keywords" content="Baran Çiçek, Web Design, UI/UX, Portfolio, Frontend Developer, Next.js" />
+        {/* Ads Ezoic Deneme Start */}
+        <meta name="ezoic-site-verification" content="t3sUIN9MDinA7o5W8nigJFVYgq43Zn" />
+        {/* Ads Ezoic Deneme End */}
 
         {/* Open Graph */}
         <meta property="og:title" content="Baran Çiçek | Portfolio" />

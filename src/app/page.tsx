@@ -112,7 +112,7 @@ export default function Home() {
               <div className="fixed right-0 bottom-0 z-[99999]">
                 <iframe
                   src="https://www.chatbase.co/chatbot-iframe/pmXHR0lKLPDcbsMTxkD0_"
-                  className="h-[500px] z-[99999]"
+                  className="h-[500px] z-[99999] rounded-xl"
                   width="100%"
                   frameBorder="0"
                 ></iframe>

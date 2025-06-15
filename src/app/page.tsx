@@ -28,7 +28,7 @@ export default function Home() {
   const router = useRouter();
   const [darkMode, setDarkMode] = useState<boolean | null>(null);
   const [loader, setLoader] = useState<boolean>(true);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
@@ -112,27 +112,32 @@ export default function Home() {
         ) : (
           <div className="">
             {
-              isOpen?(
-              <div className="fixed right-10 bottom-10 z-[99999]" onClick={() => setIsOpen(false)}>
-                <AiButton name="Baran" />
-              </div>
-              ) :(
-                 <div className="ai-agent relative z-[99999]">
-              <div className="fixed right-10 bottom-10 z-[99999]">
-                <iframe
-                  src="https://www.chatbase.co/chatbot-iframe/pmXHR0lKLPDcbsMTxkD0_"
-                  className="h-[500px] z-[99999] rounded-xl"
-                  width="100%"
-                  frameBorder="-1"
-                ></iframe>
-                <div className="mt-10 " onClick={() => setIsOpen(true)}>
-                  <AiButton name="Kapat" />
+              isOpen ? (
+                <div className="fixed right-10 bottom-10 z-[99999]" onClick={() => setIsOpen(false)}>
+                  <AiButton name="Baran" />
                 </div>
-              </div>
-            </div>
+              ) : (
+                <div className="ai-agent relative z-[99999]"
+                >
+                  <div className="fixed right-10 bottom-10 z-[99999]">
+                    <motion.iframe
+                      src="https://www.chatbase.co/chatbot-iframe/pmXHR0lKLPDcbsMTxkD0_"
+                      className="h-[500px] z-[99999] rounded-xl"
+                      width="100%"
+                      frameBorder="-1"
+
+                      initial={{y:20}}
+                      animate={{y:0}} 
+                      transition={{ duration: 1, ease: "easeInOut" }}
+                    ></motion.iframe>
+                    <div className="mt-10 " onClick={() => setIsOpen(true)}>
+                      <AiButton name="Kapat" />
+                    </div>
+                  </div>
+                </div>
               )
             }
-           
+
             <div className={`${darkMode ? "dark" : ""} overflow-hidden`}>
               <AuroraBackground className="bg-white dark:bg-black">
                 <div className="md:flex justify-evenly items-center w-full max-h-full mt-24">

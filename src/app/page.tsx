@@ -108,12 +108,12 @@ export default function Home() {
           </div>
         ) : (
           <div className="">
-            <div className="ai-agent relative bg-red-200 z-[99999]">
+            <div className="ai-agent relative z-[99999]">
               <div className="fixed right-0 bottom-0 z-[99999]">
                 <iframe
                   src="https://www.chatbase.co/chatbot-iframe/pmXHR0lKLPDcbsMTxkD0_"
+                  className="h-[500px] z-[99999]"
                   width="100%"
-                  className="h-96 z-[99999]"
                   frameBorder="0"
                 ></iframe>
               </div>

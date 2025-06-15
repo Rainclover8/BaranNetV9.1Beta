@@ -113,7 +113,7 @@ export default function Home() {
             {
               isOpen?(
               <div className="fixed right-10 bottom-10 z-[99999]" onClick={() => setIsOpen(false)}>
-                <AiButton/>
+                <AiButton name="Baran" />
               </div>
               ) :(
                  <div className="ai-agent relative z-[99999]">
@@ -124,8 +124,8 @@ export default function Home() {
                   width="100%"
                   frameBorder="-1"
                 ></iframe>
-                <div className="" onClick={() => setIsOpen(true)}>
-                  kapat
+                <div className="mt-10 " onClick={() => setIsOpen(true)}>
+                  <AiButton name="Kapat" />
                 </div>
               </div>
             </div>

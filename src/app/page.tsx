@@ -22,6 +22,7 @@ import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { useRouter } from 'next/navigation';
 import AiButton from "@/components/aiButton";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const router = useRouter();

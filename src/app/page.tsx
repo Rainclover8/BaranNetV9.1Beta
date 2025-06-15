@@ -26,7 +26,7 @@ export default function Home() {
   const router = useRouter();
   const [darkMode, setDarkMode] = useState<boolean | null>(null);
   const [loader, setLoader] = useState<boolean>(true);
-  
+
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
@@ -92,7 +92,7 @@ export default function Home() {
       time: "07.02.2025",
       textColor: "black"
     },
-    
+
   ];
 
   if (darkMode === null) return null;
@@ -100,12 +100,24 @@ export default function Home() {
   return (
     <>
       <div className="">
+
+
         {loader ? (
           <div className="flex justify-center items-center h-screen bg-red-50">
             <Loader />
           </div>
         ) : (
           <div className="">
+            <div className="ai-agent relative bg-red-200 z-[999]">
+              <div className="fixed right-0 bottom-0">
+                <iframe
+                  src="https://www.chatbase.co/chatbot-iframe/pmXHR0lKLPDcbsMTxkD0_"
+                  width="100%"
+                  className="h-96"
+                  frameBorder="0"
+                ></iframe>
+              </div>
+            </div>
             <div className={`${darkMode ? "dark" : ""} overflow-hidden`}>
               <AuroraBackground className="bg-white dark:bg-black">
                 <div className="md:flex justify-evenly items-center w-full max-h-full mt-24">
@@ -193,18 +205,18 @@ export default function Home() {
               </h1>
               <div className="mt-12 flex items-center gap-4 flex-wrap lg:justify-start justify-center">
                 <div className="flex gap-5 lg:justify-start flex-wrap justify-center items-center w-full lg:p-0 p-4">
-                  {cards&& cards.map((card, id) => {
+                  {cards && cards.map((card, id) => {
                     return (
                       <span key={id}>
                         <CardDemo
-                        link={card.link}
-                        url={card.url}
-                        title={card.title}
-                        desc={card.desc}
-                        sub_title={card.sub_title}
-                        time={card.time}
-                        textColor={card.textColor}
-                      />
+                          link={card.link}
+                          url={card.url}
+                          title={card.title}
+                          desc={card.desc}
+                          sub_title={card.sub_title}
+                          time={card.time}
+                          textColor={card.textColor}
+                        />
                       </span>
                     );
                   })}

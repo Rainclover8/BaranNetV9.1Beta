@@ -91,12 +91,16 @@ export default function RootLayout({
         {/* Google ADS */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464195965921155"
         crossOrigin="anonymous"></script>
+
+ 
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black`}
       >
         {children}
+        
       </body>
+      
     </html>
   );
 }

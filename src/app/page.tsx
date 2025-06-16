@@ -247,7 +247,7 @@ export default function Home() {
             <div>
               <FeaturesSectionDemo />
             </div>
-            <div>
+            <div className="contact" id="contact">
               {/* FORM */}
               <ContactSection />
             </div>
